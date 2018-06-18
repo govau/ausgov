@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'australia.gov.au',
   },
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-sass'],
 }
