@@ -41,6 +41,8 @@ yarn dev
 
 # Contributors
 
-<img width="64" height="64" href="https://github.com/adamzerella" src="https://avatars0.githubusercontent.com/u/1501560?s=460&v=4" alt="Adam A. Zerella"/>
+<div style="display:inline;">
+  <img width="64" height="64" href="https://github.com/adamzerella" src="https://avatars0.githubusercontent.com/u/1501560?s=460&v=4" alt="Adam A. Zerella"/>
 <img width="64" height="64" href="https://github.com/BrendanCNg" src="https://avatars2.githubusercontent.com/u/36283933?s=400&v=4" alt="Brendan Ng"/>
 <img width="64" height="64" href="https://github.com/sukhrajghuman" src="https://avatars0.githubusercontent.com/u/20184809?s=400&v=4" alt="Sukhraj Ghuman"/>
+ </div>
