@@ -11,3 +11,4 @@
 -   Added placeholder header and footer
 -   Imported relevant govau assets
 -   Removed default styling generated from gatsby
+-   Installed `gatsby-plugin-favicon` to setup favicon
