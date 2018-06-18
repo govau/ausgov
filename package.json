@@ -1,69 +1,77 @@
 {
-  "name": "ausgov",
-  "description": "Streamlined static site replacement for australia.gov.au",
-  "version": "0.0.1",
-  "author": "Adam Zerella <adam.zerella@gmail.com>",
-  "dependencies": {
-    "@gov.au/buttons": "^3.0.1",
-    "@gov.au/core": "^3.0.0",
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-sass": "^1.0.26",
-    "react-helmet": "^5.2.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.12.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adamzerella/ausgov"
-  },
-  "pancake": {
-    "auto-save": true,
-    "plugins": true,
-    "ignore": [],
-    "json": {
-      "enable": false,
-      "location": "pancake/",
-      "name": "pancake",
-      "content": {
-        "name": true,
-        "version": true,
-        "dependencies": true,
-        "path": true,
-        "settings": true
-      }
-    },
-    "css": {
-      "minified": true,
-      "modules": false,
-      "browsers": [
-        "last 2 versions",
-        "ie 8",
-        "ie 9",
-        "ie 10"
-      ],
-      "location": "pancake/css/",
-      "name": "pancake.min.css"
-    },
-    "sass": {
-      "modules": false,
-      "location": "pancake/sass/",
-      "name": "pancake.scss"
-    },
-    "react": {
-      "location": "pancake/react/"
-    }
-  }
+	"name": "ausgov",
+	"description": "Streamlined static site replacement for australia.gov.au",
+	"version": "0.0.1",
+	"author": "Adam Zerella <adam.zerella@gmail.com>",
+	"dependencies": {
+		"gatsby": "^1.9.247",
+		"gatsby-link": "^1.6.40",
+		"gatsby-plugin-react-helmet": "^2.0.10",
+		"gatsby-plugin-sass": "^1.0.26",
+		"react-helmet": "^5.2.0"
+	},
+	"keywords": [
+		"australia",
+		"australia.gov.au",
+		"ausgov"
+	],
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"dev": "gatsby develop",
+		"format": "prettier --write 'src/**/*.js'",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"prettier": "^1.12.0",
+		"@gov.au/buttons": "^3.0.1",
+		"@gov.au/core": "^3.0.0",
+		"@gov.au/pancake": "^1.2.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adamzerella/ausgov"
+	},
+	"pancake": {
+		"auto-save": true,
+		"plugins": true,
+		"ignore": [],
+		"json": {
+			"enable": false,
+			"location": "pancake/",
+			"name": "pancake",
+			"content": {
+				"name": true,
+				"version": true,
+				"dependencies": true,
+				"path": true,
+				"settings": true
+			}
+		},
+		"css": {
+			"minified": true,
+			"modules": false,
+			"browsers": [
+				"last 2 versions",
+				"ie 8",
+				"ie 9",
+				"ie 10"
+			],
+			"location": "pancake/css/",
+			"name": "pancake.min.css"
+		},
+		"sass": {
+			"modules": false,
+			"location": "pancake/sass/",
+			"name": "pancake.scss"
+		},
+		"react": {
+			"location": "pancake/react/"
+		}
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run format"
+		}
+	}
 }

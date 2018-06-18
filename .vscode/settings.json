@@ -1,0 +1,7 @@
+{
+	"editor.renderWhitespace": "all",
+	"editor.fontSize": 14,
+	"editor.formatOnSave": true,
+	"editor.rulers": [80],
+	"editor.tabSize": 4
+}
