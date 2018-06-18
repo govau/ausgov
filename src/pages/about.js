@@ -1,6 +1,6 @@
 import React from "react";
 const AboutPage = () => (
-	<div className="AboutPage">
+	<div>
 		<h1> About australia.gov.au</h1>
 		There are lots of government websites and we know it can be hard to find
 		the information you need. Australia.gov.au puts you on the right path by

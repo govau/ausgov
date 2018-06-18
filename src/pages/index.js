@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
 
-const IndexPage = () => <div className="au-body au-body--dark">hello</div>;
+const IndexPage = () => <div>index page</div>;
 
 export default IndexPage;

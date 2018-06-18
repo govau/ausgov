@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 
 import Header from "../components/header";
 import "./index.scss";
+import "../../pancake/css/pancake.min.css";
 
 const Layout = ({ children, data }) => (
 	<div>
