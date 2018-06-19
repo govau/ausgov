@@ -4,7 +4,7 @@ import AUlinkList from "@gov.au/link-list";
 import Link from "gatsby-link";
 
 import "./footer.scss";
-
+import linkIcon from "../assets/link.svg";
 const Footer = () => (
 	<AUfooter dark>
 		<AUfooterNav>
@@ -24,7 +24,12 @@ const Footer = () => (
 			the{" "}
 			<a href="https://raw.githubusercontent.com/adamzerella/ausgov/master/LICENSE">
 				MIT license
-			</a>
+				<img
+					className="licenseLink"
+					alt="MIT license link"
+					src={linkIcon}
+				/>
+			</a>{" "}
 		</AUfooterEnd>
 	</AUfooter>
 );
