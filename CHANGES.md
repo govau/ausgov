@@ -15,3 +15,6 @@
 -   Updated `About page` with more information and hyperlinks
 -   Added `linkComponent` to footer navigation links to stop page refresh
 -   Fixed issue `#14: Typo in README`
+-   Added `app-container` div to house web app with relevant padding for content
+-   Set footer to display `flex` to keep it sticky.
+-   Added `OfficalBanner` component to `Header`

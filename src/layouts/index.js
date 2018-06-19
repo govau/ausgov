@@ -9,7 +9,7 @@ import "./index.scss";
 import "../../pancake/css/pancake.min.css";
 
 const Layout = ({ children, data }) => (
-	<div>
+	<div className="app-container">
 		<Helmet
 			title={data.site.siteMetadata.title}
 			meta={[

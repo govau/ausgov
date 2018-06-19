@@ -1,15 +1,11 @@
 .au-header {
-	margin: 0;
-	padding: 0;
 	width: 100%;
+	margin-left: 16px;
+	margin-right: 16px;
 }
 
-.au-header__brand img {
-	width: auto;
-	height: auto;
-}
-
-@media (min-width: 768px) {
-	margin: 0;
-	padding: 0;
+.offical-banner {
+	text-align: center;
+	background-color: black;
+	color: white;
 }
