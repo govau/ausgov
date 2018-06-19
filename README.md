@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/github/license/adamzerella/ausgov.svg)](https://github.com/adamzerella/ausgov/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/adamzerella/ausgov.svg)](https://github.com/adamzerella/ausgov/issues)
 
-> Streamlined static site replacement for australia.gov.au
+> Streamlined static site replacement for [australia.gov.au](https://www.australia.gov.au)
 
 # Contents
 
@@ -13,7 +13,7 @@
 
 # Prerequisites
 
-This project reccomends for you to have [NodeJS LTS](https://nodejs.org/en/) installed prefers [Yarn](https://yarnpkg.com/lang/en/).
+This project reccomends for you to have [NodeJS LTS](https://nodejs.org/en/) installed and preferences [Yarn](https://yarnpkg.com/lang/en/) over NPM.
 
 # Installation
 
