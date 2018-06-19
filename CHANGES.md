@@ -17,3 +17,4 @@
 -   Added `app-container` div to house web app with relevant padding for content
 -   Set footer to display `flex` to keep it sticky.
 -   Added `OfficalBanner` component to `Header`
+-   Created `accessibility`, `contact-us`, `terms of use` pages
