@@ -21,3 +21,4 @@
 -   Tweaked footer links left/right spacing
 -   Installed `@gov.au/body`
 -   Added external link icon to footer
+-   Removed underline from header
