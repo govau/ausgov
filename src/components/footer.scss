@@ -1,6 +1,13 @@
 .au-footer .au-footer--dark {
 	margin: 0;
 	bottom: 0;
+	left: 0;
+	right: 0;
 	width: 100%;
 	border-top: none;
+}
+
+.au-footer__end {
+	margin-left: 16px;
+	margin-right: 16px;
 }
