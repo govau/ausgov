@@ -12,3 +12,4 @@
 -   Imported relevant govau assets
 -   Removed default styling generated from gatsby
 -   Installed `gatsby-plugin-favicon` to setup favicon
+-   Added `linkComponent` to footer navigation links to stop page refresh

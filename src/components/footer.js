@@ -15,6 +15,7 @@ const Footer = () => (
 						text: "About",
 					},
 				]}
+				linkComponent={Link}
 			/>
 		</AUfooterNav>
 		<AUfooterEnd>
