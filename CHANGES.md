@@ -22,3 +22,4 @@
 -   Installed `@gov.au/body`
 -   Added external link icon to footer
 -   Removed underline from header
+-   Installed `@gov.au/accordion`

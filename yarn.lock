@@ -2,6 +2,26 @@
 # yarn lockfile v1
 
 
+"@gov.au/accordion@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@gov.au/accordion/-/accordion-3.0.5.tgz#7ccdedba8a2e52b73e8a892d44e3f6f87129e16d"
+  dependencies:
+    "@gov.au/animate" "^1.0.0"
+    "@gov.au/core" "^3.0.0"
+    "@gov.au/pancake" "~1"
+    "@gov.au/pancake-js" "~1"
+    "@gov.au/pancake-json" "~1"
+    "@gov.au/pancake-react" "~1"
+    "@gov.au/pancake-sass" "~2"
+
+"@gov.au/animate@^1.0.0":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@gov.au/animate/-/animate-1.0.4.tgz#b839ddaf48a7b9aa8641d87f915810582f48b12d"
+  dependencies:
+    "@gov.au/pancake" "~1"
+    "@gov.au/pancake-js" "~1"
+    "@gov.au/pancake-json" "~1"
+
 "@gov.au/body@^2.0.0", "@gov.au/body@^2.0.7":
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/@gov.au/body/-/body-2.0.7.tgz#6f2fa54680a0132f50490b4acd15a4b5daa6df47"
@@ -60,6 +80,14 @@
     "@gov.au/pancake-json" "~1"
     "@gov.au/pancake-react" "~1"
     "@gov.au/pancake-sass" "~2"
+
+"@gov.au/pancake-js@~1":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@gov.au/pancake-js/-/pancake-js-1.0.12.tgz#b2fb73787c988265881c74b7ba2eea48b15f7653"
+  dependencies:
+    "@gov.au/pancake" "~1"
+    babel-runtime "6.26.0"
+    uglify-js "3.1.9"
 
 "@gov.au/pancake-json@~1":
   version "1.0.6"
@@ -1985,6 +2013,10 @@ commander@2.9.0, commander@2.9.x:
 commander@^2.9.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
+
+commander@~2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
 common-tags@0.1.1:
   version "0.1.1"
@@ -7718,7 +7750,7 @@ source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.1, sour
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
-source-map@^0.6.1:
+source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
@@ -8212,6 +8244,13 @@ type-of@^2.0.1:
 ua-parser-js@^0.7.18:
   version "0.7.18"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
+
+uglify-js@3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.1.9.tgz#dffca799308cf327ec3ac77eeacb8e196ce3b452"
+  dependencies:
+    commander "~2.11.0"
+    source-map "~0.6.1"
 
 uglify-js@^2.6, uglify-js@^2.6.1:
   version "2.8.29"
