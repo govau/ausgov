@@ -1,4 +1,18 @@
-body {
+body,
+html {
 	margin: 0;
 	padding: 0;
+}
+
+.app-container {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.au-body {
+	padding: 16px;
+	flex: 1;
 }

@@ -13,3 +13,6 @@
 -   Removed default styling generated from gatsby
 -   Installed `gatsby-plugin-favicon` to setup favicon
 -   Added `linkComponent` to footer navigation links to stop page refresh
+-   Added `app-container` div to house web app with relevant padding for content
+-   Set footer to display `flex` to keep it sticky.
+-   Added `OfficalBanner` component to `Header`
