@@ -12,3 +12,4 @@
 -   Imported relevant govau assets
 -   Removed default styling generated from gatsby
 -   Installed `gatsby-plugin-favicon` to setup favicon
+-   Updated `About page` with more information and hyperlinks
