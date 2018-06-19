@@ -19,3 +19,4 @@
 -   Added `OfficalBanner` component to `Header`
 -   Styled `a` text to be white;
 -   Tweaked footer links left/right spacing
+-   Installed `@gov.au/body`
