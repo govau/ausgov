@@ -1,6 +1,6 @@
 ---
-path: "/home"
+path: "/"
 title: "Home Page"
 ---
 
-This is an index page
+index page

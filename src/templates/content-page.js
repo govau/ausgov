@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 
 export default function Template({ data }) {
     const post = data.markdownRemark
-
     return (
         <div>
             <h1>{post.frontmatter.title}</h1>

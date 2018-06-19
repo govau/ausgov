@@ -1,5 +1,5 @@
 ---
-path: "/about-md"
+path: "/about"
 title: "About Page"
 ---
 
