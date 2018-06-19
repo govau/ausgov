@@ -13,3 +13,4 @@
 -   Removed default styling generated from gatsby
 -   Installed `gatsby-plugin-favicon` to setup favicon
 -   Updated `About page` with more information and hyperlinks
+-   Added `linkComponent` to footer navigation links to stop page refresh
