@@ -14,6 +14,14 @@
 -   Installed `gatsby-plugin-favicon` to setup favicon
 -   Updated `About page` with more information and hyperlinks
 -   Added `linkComponent` to footer navigation links to stop page refresh
+-   Fixed issue `#14: Typo in README`
 -   Added `app-container` div to house web app with relevant padding for content
 -   Set footer to display `flex` to keep it sticky.
 -   Added `OfficalBanner` component to `Header`
+-   Styled `a` text to be white;
+-   Tweaked footer links left/right spacing
+-   Installed `@gov.au/body`
+-   Added external link icon to footer
+-   Removed underline from header
+-   Installed `@gov.au/accordion`
+-   Implemented basic govau banner accordian to page (incomplete)

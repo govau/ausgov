@@ -13,7 +13,7 @@
 
 # Prerequisites
 
-This project reccomends for you to have [NodeJS LTS](https://nodejs.org/en/) installed and preferences [Yarn](https://yarnpkg.com/lang/en/) over NPM.
+This project requires for you to have [NodeJS LTS](https://nodejs.org/en/) installed and preferences [Yarn](https://yarnpkg.com/lang/en/) over NPM.
 
 # Installation
 
