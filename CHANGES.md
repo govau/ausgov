@@ -10,6 +10,7 @@
 -   Added `border-bottom` property to `a` links
 -   Installed `@gov.au/grid-12` component, added to index page.
 -   Added placeholder `.circleci` workflow
+-   Modified circleci placeholder to follow CircleCI 2.0 syntax (docker)
 
 ## 0.0.1
 
