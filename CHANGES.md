@@ -4,6 +4,10 @@
 -   Updated `package.json` file version
 -   Moved `404.js` to `404.md`
 -   Added project version to alpha badge in header
+-   Imported design system color variable defaults
+-   Updated header subline text
+-   Removed invalid CSS properties and minor tweaks on offical banner
+-   Added `border-bottom` property to `a` links
 
 ## 0.0.1
 

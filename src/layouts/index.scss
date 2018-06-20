@@ -1,3 +1,5 @@
+@import "../_variables.scss";
+
 body,
 html {
 	margin: 0;
@@ -7,6 +9,8 @@ html {
 a,
 a:active {
 	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid $text-underline;
 }
 
 .app-container {
