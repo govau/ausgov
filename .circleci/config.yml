@@ -5,8 +5,17 @@ jobs:
       - image: circleci/node:8.11.3-browsers
     steps:
       - checkout
-      - run: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-      - run: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-      - run: sudo apt-get update && sudo apt-get install apt-transport-https yarn
+      - run: node --version
+      - run: npm --version
       - run: yarn --version
-      - run: yarn install
+      - run: 
+          name: Install Dependencies
+          command: yarn install
+      - run:
+          name: Install cf CLI
+          command: wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+          command: echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+          command: sudo apt-get update && sudo apt-get install cf-cli
+          command: cf-cli --version
+
+
