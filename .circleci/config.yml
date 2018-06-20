@@ -1,29 +1,89 @@
 version: 2
 jobs:
-  build:
+  # DEPLOY PRODUCTION JOB
+  deploy-prod:
     docker:
       - image: circleci/node:8.11.3-stretch-browsers
     steps:
       - checkout
       - run:
-          name: Setup container
+          name: Install cf-cli dependencies
           command: |
             sudo apt-get update
             sudo apt-get install apt-transport-https apt-utils
       - run: 
-          name: Node version check
+          name: Node version log
           command: |
             node --version
             npm --version
             yarn --version
       - run:
-          name: Install cf CLI
+          name: Install Cloud Foundry CLI
           command: |
             wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             sudo apt-get update && sudo apt-get install cf-cli
             cf --version
+            cf install-plugin https://github.com/contraband/autopilot/releases/download/0.0.6/autopilot-linux -f
       - run: 
           name: Install dependencies
           command: yarn install
+      - run: 
+          name: Build australia.gov.au
+          command: yarn build
+      - run: 
+          name: Deploy app
+          command: |
+            cf login -a api.system.b.cld.gov.au -o $CF_PROD_ORG -s $CF_PROD_SPACE -u $CF_PROD_USER -p $CF_PROD_PASS
+            cf zero-downtime-push ausgov -f ./deploy/prod-manifest.yml
 
+
+  # DEPLOY STAGING JOB
+  deploy-stag:
+      docker:
+        - image: circleci/node:8.11.3-stretch-browsers
+      steps:
+        - checkout
+        - run:
+            name: Install cf-cli dependencies
+            command: |
+              sudo apt-get update
+              sudo apt-get install apt-transport-https apt-utils
+        - run: 
+            name: Node version log
+            command: |
+              node --version
+              npm --version
+              yarn --version
+        - run:
+            name: Install Cloud Foundry CLI
+            command: |
+              wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              sudo apt-get update && sudo apt-get install cf-cli
+              cf --version
+              cf install-plugin https://github.com/contraband/autopilot/releases/download/0.0.6/autopilot-linux -f
+        - run: 
+            name: Install dependencies
+            command: yarn install
+        - run: 
+            name: Build australia.gov.au
+            command: yarn build
+        - run: 
+            name: Deploy app
+            command: |
+              cf login -a api.system.y.cld.gov.au -o $CF_STAG_ORG -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
+              cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
+
+
+workflows:
+  build-workflow:
+      jobs:
+        - deploy-stag:
+            filters:
+              branches:
+                only: develop 
+        - deploy-prod:
+            filters:
+              branches:
+                only: master

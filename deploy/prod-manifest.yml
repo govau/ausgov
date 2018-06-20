@@ -1,0 +1,12 @@
+---
+applications:
+- name: ausgov
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  memory: 64M
+  instances: 1
+  path: ./
+  env: 
+    OPTIMIZE_MEMORY: true
+
+routes:
+- route: TODO
