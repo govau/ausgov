@@ -26,3 +26,4 @@
 -   Installed `@gov.au/accordion`
 -   Implemented basic govau banner accordian to page (incomplete)
 -   Styling changes to header component
+-   Added additional links to footer with inline styles and spacing.

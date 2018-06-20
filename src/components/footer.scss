@@ -1,4 +1,4 @@
-.au-footer .au-footer--dark {
+.au-footer {
 	margin: 0;
 	bottom: 0;
 	border-top: none;
@@ -7,12 +7,18 @@
 .au-footer__end {
 	margin-left: 16px;
 	margin-right: 16px;
+	width: 60%;
+	font-weight: lighter !important;
 }
 
 .au-link-list {
 	padding: 0;
 	margin-left: 16px;
 	margin-right: 16px;
+	display: inline-flex !important;
+	li {
+		padding-right: 16px;
+	}
 }
 
 .licenseLink {
@@ -20,4 +26,8 @@
 	height: 16px;
 	margin-left: 5px;
 	vertical-align: middle;
+}
+
+.feedback-block {
+	float: right;
 }

@@ -5,6 +5,7 @@ import Link from "gatsby-link";
 
 import "./footer.scss";
 import linkIcon from "../assets/link.svg";
+
 const Footer = () => (
 	<AUfooter dark>
 		<AUfooterNav>
@@ -13,6 +14,14 @@ const Footer = () => (
 					{
 						link: "/about",
 						text: "About",
+					},
+					{
+						link: "/accessibility",
+						text: "Accessibility",
+					},
+					{
+						link: "/privacy",
+						text: "Privacy",
 					},
 				]}
 				linkComponent={Link}
