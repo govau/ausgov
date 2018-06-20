@@ -1,6 +1,8 @@
 ## 0.0.2
 
--
+-   Moved pages from `src/pages/markdown` to `src/pages`
+-   Updated `package.json` file version
+-   Moved `404.js` to `404.md`
 
 ## 0.0.1
 

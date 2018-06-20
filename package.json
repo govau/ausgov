@@ -1,7 +1,7 @@
 {
 	"name": "ausgov",
 	"description": "Streamlined static site replacement for australia.gov.au",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Adam Zerella <adam.zerella@gmail.com>",
 	"dependencies": {
 		"gatsby": "^1.9.247",

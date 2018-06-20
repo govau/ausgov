@@ -1,6 +1,6 @@
 ---
 path: "/about"
-title: "About Page"
+title: "About"
 ---
 
 **This is the about page page**
