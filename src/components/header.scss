@@ -1,18 +1,26 @@
+@import "../_variables.scss";
+
 .au-header {
-	margin-left: 16px;
-	margin-right: 16px;
-	background-color: #313131;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	background-color: #212121 !important;
 }
 
 .au-header__text {
 	text-decoration: none !important;
-	// margin-left: 196px !important;
+	margin-left: $AU-logo-width-sm - 3unit !important;
 }
 
-.au-header img {
-	width: 172px;
-	// height: 172px;
+.au-header__brand-image {
+	-webkit-filter: invert(100%);
 }
+
+.au-header__text,
+.au-header__heading,
+.au-header__subline {
+	color: white !important;
+}
+
 .offical-banner {
 	z-index: 1;
 	display: block;
@@ -35,10 +43,12 @@
 		text-decoration: none;
 		text-anchor: middle;
 	}
+
 	.au-accordion__title {
 		font-size: 14px;
 		font-weight: normal;
 	}
+
 	.au-accordion__body-wrapper {
 		background-color: black;
 		color: white;
@@ -50,8 +60,6 @@
 		margin-right: 16px;
 		margin-top: 12px;
 		font-size: 14px;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-			"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-			"Helvetica Neue", sans-serif;
+		font-family: $AU-font;
 	}
 }

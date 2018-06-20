@@ -29,7 +29,13 @@ const OfficalBanner = () => {
 			<AUaccordion header={`Australian Government official website`}>
 				Here <a href="#url">is</a> some accordion content
 			</AUaccordion>{" "}
-			<span className="banner-link">dta.gov.au</span>
+			<a
+				href="https://www.dta.gov.au/"
+				alt="DTA website"
+				className="banner-link"
+			>
+				dta.gov.au
+			</a>
 		</div>
 	);
 };

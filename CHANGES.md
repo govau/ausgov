@@ -25,3 +25,4 @@
 -   Removed underline from header
 -   Installed `@gov.au/accordion`
 -   Implemented basic govau banner accordian to page (incomplete)
+-   Styling changes to header component
