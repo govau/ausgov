@@ -9,6 +9,7 @@
 -   Removed invalid CSS properties and minor tweaks on offical banner
 -   Added `border-bottom` property to `a` links
 -   Installed `@gov.au/grid-12` component, added to index page.
+-   Added placeholder `.circleci` workflow
 
 ## 0.0.1
 
