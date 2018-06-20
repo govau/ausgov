@@ -34,3 +34,4 @@
 -   Seperated logo, title, subline items in `official-banner`
 -   Added alpha badge to `au-header` subline text
 -   Added australia start icon to assets
+-   Added favicon and basic metadata information
