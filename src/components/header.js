@@ -8,6 +8,8 @@ import star from "../assets/star_white.svg";
 
 import "./header.scss";
 
+const version = require("../../package.json").version;
+
 const Header = ({ siteTitle }) => (
 	<div>
 		<OfficalBanner />
@@ -21,7 +23,9 @@ const Header = ({ siteTitle }) => (
 				subline={
 					<div>
 						Australian Information{" "}
-						<span className="alpha-badge">alpha</span>
+						<span className="alpha-badge">
+							alpha{` ${version}`}
+						</span>
 					</div>
 				}
 			/>

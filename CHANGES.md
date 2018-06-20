@@ -3,6 +3,7 @@
 -   Moved pages from `src/pages/markdown` to `src/pages`
 -   Updated `package.json` file version
 -   Moved `404.js` to `404.md`
+-   Added project version to alpha badge in header
 
 ## 0.0.1
 
