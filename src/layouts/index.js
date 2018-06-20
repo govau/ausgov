@@ -11,36 +11,38 @@ import "./index.scss";
 import "../../pancake/css/pancake.min.css";
 
 const Layout = ({ children, data }) => (
-	<div className="app-container">
-		<Helmet
-			title={data.site.siteMetadata.title}
-			meta={[
-				{ name: "description", content: "Australian information" },
-				{
-					name: "keywords",
-					content: `australia, ausgov, australia.gov.au, 
+	<main class="au-grid">
+		<div className="app-container">
+			<Helmet
+				title={data.site.siteMetadata.title}
+				meta={[
+					{ name: "description", content: "Australian information" },
+					{
+						name: "keywords",
+						content: `australia, ausgov, australia.gov.au, 
 						australian information, australian government`,
-				},
-				{
-					name: "og:title",
-					content: `${data.site.siteMetadata.title}`,
-				},
-				{ name: "og:url", content: "https://ausgov.gov.au" },
-				{ name: "charset", content: "utf-8" },
-			]}
-			link={[
-				{
-					rel: "shortcut icon",
-					type: "image/x-icon",
-					href: `${favicon}`,
-				},
-			]}
-		/>
-		<Header siteTitle={data.site.siteMetadata.title} />
-		<div className="au-body">{children()}</div>
-		<br />
-		<Footer />
-	</div>
+					},
+					{
+						name: "og:title",
+						content: `${data.site.siteMetadata.title}`,
+					},
+					{ name: "og:url", content: "https://ausgov.gov.au" },
+					{ name: "charset", content: "utf-8" },
+				]}
+				link={[
+					{
+						rel: "shortcut icon",
+						type: "image/x-icon",
+						href: `${favicon}`,
+					},
+				]}
+			/>
+			<Header siteTitle={data.site.siteMetadata.title} />
+			<div className="au-body">{children()}</div>
+			<br />
+			<Footer />
+		</div>
+	</main>
 );
 
 Layout.propTypes = {

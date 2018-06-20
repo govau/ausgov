@@ -60,6 +60,15 @@
     "@gov.au/pancake-react" "~1"
     "@gov.au/pancake-sass" "~2"
 
+"@gov.au/grid-12@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@gov.au/grid-12/-/grid-12-2.0.5.tgz#55c37334d1da4345352c2f389417914e53fc985d"
+  dependencies:
+    "@gov.au/core" "^3.0.0"
+    "@gov.au/pancake" "~1"
+    "@gov.au/pancake-json" "~1"
+    "@gov.au/pancake-sass" "~2"
+
 "@gov.au/header@^4.1.1":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@gov.au/header/-/header-4.1.1.tgz#8386a1af15d6161ed52d947e1d53fef50b1f87bf"

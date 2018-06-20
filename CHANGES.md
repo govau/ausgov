@@ -8,6 +8,7 @@
 -   Updated header subline text
 -   Removed invalid CSS properties and minor tweaks on offical banner
 -   Added `border-bottom` property to `a` links
+-   Installed `@gov.au/grid-12` component, added to index page.
 
 ## 0.0.1
 
