@@ -5,17 +5,21 @@ jobs:
       - image: circleci/node:8.11.3-browsers
     steps:
       - checkout
-      - run: node --version
-      - run: npm --version
-      - run: yarn --version
       - run: 
-          name: Install Dependencies
+          name: Node version check
+          command: |
+            node --version
+            npm --version
+            yarn --version
+      - run: 
+          name: Install dependencies
           command: yarn install
       - run:
           name: Install cf CLI
-          command: wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-          command: echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-          command: sudo apt-get update && sudo apt-get install cf-cli
-          command: cf-cli --version
+          command: |
+            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+            sudo apt-get update && sudo apt-get install cf-cli
+            cf-cli --version
 
 
