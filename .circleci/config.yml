@@ -5,15 +5,17 @@ jobs:
       - image: circleci/node:8.11.3-stretch-browsers
     steps:
       - checkout
+      - run:
+          name: Setup container
+          command: |
+            sudo apt-get update
+            sudo apt-get install apt-transport-https
       - run: 
           name: Node version check
           command: |
             node --version
             npm --version
             yarn --version
-      - run: 
-          name: Install dependencies
-          command: yarn install
       - run:
           name: Install cf CLI
           command: |
@@ -21,5 +23,7 @@ jobs:
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             sudo apt-get update && sudo apt-get install cf-cli
             cf-cli --version
-
+      - run: 
+          name: Install dependencies
+          command: yarn install
 
