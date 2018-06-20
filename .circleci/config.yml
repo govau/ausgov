@@ -9,7 +9,7 @@ jobs:
           name: Setup container
           command: |
             sudo apt-get update
-            sudo apt-get install apt-transport-https
+            sudo apt-get install apt-transport-https apt-utils
       - run: 
           name: Node version check
           command: |
