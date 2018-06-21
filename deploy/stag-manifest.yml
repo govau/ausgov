@@ -2,11 +2,11 @@
 applications:
 - name: ausgov
   buildpack: nodejs_buildpack
-  memory: 128M
+  memory: 256M
   instances: 1
   env: 
     OPTIMIZE_MEMORY: true
     NODE_ENV: development
-  command: ls -ls && yarn start
+  command: ls -ls && rm -f package-lock.json && yarn start
 routes:
 - route: ausgov.apps.y.cld.gov.au

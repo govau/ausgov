@@ -35,7 +35,6 @@ jobs:
       #     name: Build alpha.australia.gov.au
       #     command: yarn build
       - run: yarn purge                    # delete node_modules folder again to not push it to cf
-      - run: yarn cache clean
       - run: 
           name: Deploy app
           command: |
