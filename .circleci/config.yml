@@ -3,9 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:8.11.3-stretch-browsers
-  filters:
     branches:
-      only: develop
+      only:
+        - develop
   steps:
     - checkout
     - run:
