@@ -1,12 +1,7 @@
 ---
 applications:
 - name: ausgov
-  buildpack: nodejs_buildpack
+  buildpack: staticfile_buildpack
   memory: 256M
   instances: 1
-  env: 
-    OPTIMIZE_MEMORY: true
-    NODE_ENV: development
-  command: ls -ls && yarn start
-routes:
-- route: ausgov.apps.y.cld.gov.au
+  path: "../public"

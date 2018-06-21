@@ -7,6 +7,8 @@ jobs:
       only:
         - develop
         - issue/9-Setup-deployment-workflow
+    environment:
+      NODE_ENV: "production"
     steps:
       - checkout
       - run:
@@ -28,13 +30,12 @@ jobs:
             sudo apt update && sudo apt install cf-cli
             cf --version
             cf install-plugin https://github.com/contraband/autopilot/releases/download/0.0.6/autopilot-linux -f
-      # - run: 
-      #     name: Install dependencies
-      #     command: yarn install
-      # - run: 
-      #     name: Build alpha.australia.gov.au
-      #     command: yarn build
-      - run: yarn purge                    # delete node_modules folder again to not push it to cf
+      - run: 
+          name: Install dependencies
+          command: yarn install
+      - run: 
+          name: Build alpha.australia.gov.au
+          command: yarn build
       - run: 
           name: Deploy app
           command: |
