@@ -35,7 +35,7 @@ jobs:
           name: Build alpha.australia.gov.au
           command: yarn build
       - run: 
-        name: Deploy app
-        command: |
-          cf login -a api.system.y.cld.gov.au -o dta -s ausgov -u $CF_STAG_USER -p $CF_STAG_PASS
-          cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
+          name: Deploy app
+          command: |
+            cf login -a api.system.y.cld.gov.au -o dta -s ausgov -u $CF_STAG_USER -p $CF_STAG_PASS
+            cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
