@@ -11,6 +11,7 @@
 -   Installed `@gov.au/grid-12` component, added to index page.
 -   Added placeholder `.circleci` workflow
 -   Modified circleci placeholder to follow CircleCI 2.0 syntax (docker)
+-   Added banner with text
 
 ## 0.0.1
 
