@@ -34,18 +34,20 @@ jobs:
 
   # DEPLOY PRODUCTION JOB
   deploy-prod:
-    - run: 
-        name: Deploy app
-        command: echo "placeholer"
+    steps:
+      - run: 
+          name: Deploy app
+          command: echo "placeholer"
 
 
   # DEPLOY STAGING JOB
   deploy-stag:
-    - run: 
-      name: Deploy app
-      command: |
-        cf login -a api.system.y.cld.gov.au -o dta -s ausgov -u $CF_STAG_USER -p $CF_STAG_PASS
-        cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
+    steps:
+      - run: 
+        name: Deploy app
+        command: |
+          cf login -a api.system.y.cld.gov.au -o dta -s ausgov -u $CF_STAG_USER -p $CF_STAG_PASS
+          cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
 
 
 workflows:
