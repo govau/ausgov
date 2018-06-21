@@ -1,15 +1,5 @@
 version: 2
 jobs:
-  # DEPLOY PRODUCTION JOB
-  deploy-prod:
-    docker:
-      - image: circleci/node:8.11.3-stretch-browsers
-    steps:
-      - run: 
-          name: Deploy app
-          command: echo "placeholer"
-
-
   # DEPLOY STAGING JOB
   deploy-stag:
     docker:
