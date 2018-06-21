@@ -8,5 +8,6 @@ applications:
   env: 
     OPTIMIZE_MEMORY: true
     NODE_ENV: development
+  command: yarn start
 routes:
 - route: ausgov.apps.y.cld.gov.au

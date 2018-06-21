@@ -24,6 +24,7 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"start": "yarn build && node ./src/server/index.js",
 		"build": "gatsby build",
 		"dev": "gatsby develop",
 		"format": "prettier --write 'src/**/*.js'",

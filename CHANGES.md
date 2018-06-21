@@ -13,6 +13,8 @@
 -   Modified circleci placeholder to follow CircleCI 2.0 syntax (docker)
 -   Added `engines` key in package.json to specify CF version
 -   Updated `deploy/xxxx-manifest` configurations for CF.
+-   Added basic express server functionality for deployment to CF
+-   Added start command to CF manifest.
 
 ## 0.0.1
 
