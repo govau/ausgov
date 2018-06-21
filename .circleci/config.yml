@@ -1,7 +1,7 @@
 version: 2
 jobs:
   # DEPLOY STAGING JOB
-  deploy-stag:
+  build:
     docker:
       - image: circleci/node:8.11.3-stretch-browsers
     steps:
@@ -76,7 +76,7 @@ workflows:
   version: 2
   deploying:
     jobs:
-      - deploy-stag:
+      - build:
           filters:
             branches:
               only: develop
