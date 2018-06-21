@@ -4,7 +4,8 @@
 	"version": "0.0.2",
 	"engines": {
 		"node": "8.11.3",
-		"npm": "5.6.0"
+		"npm": "5.6.0",
+		"yarn": "1.6.0"
 	},
 	"author": "Adam Zerella <adam.zerella@gmail.com>",
 	"dependencies": {
