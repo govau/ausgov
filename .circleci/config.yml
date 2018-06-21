@@ -37,16 +37,51 @@ jobs:
           cf login -a api.system.y.cld.gov.au -o dta -s ausgov -u $CF_STAG_USER -p $CF_STAG_PASS
           cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
 
+  # DEPLOY PROD JOB
+  deploy-prod:
+    docker:
+      - image: circleci/node:8.11.3-stretch-browsers
+    steps:
+      - checkout
+      - run:
+          name: Install cf-cli dependencies
+          command: |
+            sudo apt update
+            sudo apt install apt-transport-https apt-utils
+      - run: 
+          name: Node version log
+          command: |
+            node --version
+            npm --version
+            yarn --version
+      - run:
+          name: Install Cloud Foundry CLI
+          command: |
+            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+            sudo apt update && sudo apt install cf-cli
+            cf --version
+            cf install-plugin https://github.com/contraband/autopilot/releases/download/0.0.6/autopilot-linux -f
+      - run: 
+          name: Install dependencies
+          command: yarn install
+      - run: 
+          name: Build alpha.australia.gov.au
+          command: yarn build
+      - run: 
+        name: Deploy app
+        command: echo "test prod"
+
 
 workflows:
   version: 2
-  build-and-deploy:
+  deploy:
     jobs:
       - deploy-stag:
           filters:
             branches:
               only: develop 
-      # - deploy-prod:
-      #     filters:
-      #       branches:
-      #         only: master
+      - deploy-prod:
+          filters:
+            branches:
+              only: master
