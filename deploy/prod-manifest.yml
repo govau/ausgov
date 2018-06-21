@@ -2,11 +2,11 @@
 applications:
 - name: ausgov
   buildpack: nodejs_buildpack
-  memory: 128M
+  memory: 256M
   instances: 1
-  path: ./
   env: 
     OPTIMIZE_MEMORY: true
     NODE_ENV: production
+  command: yarn start
 routes:
 - route: alpha.australia.gov.au

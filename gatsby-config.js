@@ -1,5 +1,4 @@
 module.exports = {
-	pathPrefix: `/ausgov`,
 	siteMetadata: {
 		title: "australia.gov.au",
 	},

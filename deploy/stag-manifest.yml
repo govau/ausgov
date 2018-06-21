@@ -7,6 +7,6 @@ applications:
   env: 
     OPTIMIZE_MEMORY: true
     NODE_ENV: development
-  command: ls -ls && rm -f package-lock.json && yarn start
+  command: ls -ls && yarn start
 routes:
 - route: ausgov.apps.y.cld.gov.au
