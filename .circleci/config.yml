@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build-project:
+  build:
     docker:
       - image: circleci/node:8.11.3-stretch-browsers
     steps:
@@ -50,12 +50,10 @@ jobs:
 
 workflows:
   version: 2
-  build-workflow:
+  build-and-deploy:
     jobs:
-      - build-project
+      - build
       - deploy-stag:
-          requires:
-            - build-project
           filters:
             branches:
               only: develop 
