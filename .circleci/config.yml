@@ -6,6 +6,7 @@ jobs:
     branches:
       only:
         - develop
+        - issue/9-Setup-deployment-workflow
     steps:
       - checkout
       - run:
