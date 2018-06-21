@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install cf-cli dependencies
+          name: Install Cloud Foundry CLI Dependencies
           command: |
             sudo apt update
             sudo apt install apt-transport-https apt-utils
