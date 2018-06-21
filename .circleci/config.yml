@@ -72,7 +72,6 @@ jobs:
         name: Deploy app
         command: echo "test prod"
 
-
 workflows:
   version: 2
   deploying:
@@ -80,7 +79,7 @@ workflows:
       - deploy-stag:
           filters:
             branches:
-              only: develop 
+              only: develop
       - deploy-prod:
           filters:
             branches:
