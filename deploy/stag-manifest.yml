@@ -4,10 +4,9 @@ applications:
   buildpack: nodejs_buildpack
   memory: 128M
   instances: 1
-  # path: /home/vcap/app/
   env: 
     OPTIMIZE_MEMORY: true
     NODE_ENV: development
-  command: yarn start
+  command: ls -ls && yarn start
 routes:
 - route: ausgov.apps.y.cld.gov.au
