@@ -4,7 +4,7 @@ applications:
   buildpack: nodejs_buildpack
   memory: 128M
   instances: 1
-  path: /home/vcap/app/
+  # path: /home/vcap/app/
   env: 
     OPTIMIZE_MEMORY: true
     NODE_ENV: development
