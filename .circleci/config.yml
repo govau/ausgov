@@ -54,6 +54,8 @@ workflows:
     jobs:
       - build
       - deploy-stag:
+          requires:
+            build
           filters:
             branches:
               only: develop 
