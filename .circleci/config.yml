@@ -36,6 +36,9 @@ jobs:
       - run: 
           name: Install dependencies
           command: yarn install
+      - run
+          name: Setup design system
+          command: yarn pancake
       - run: 
           name: Build alpha.australia.gov.au
           command: yarn build
