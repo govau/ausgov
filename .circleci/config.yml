@@ -31,6 +31,9 @@ jobs:
             cf --version
             cf install-plugin https://github.com/contraband/autopilot/releases/download/0.0.6/autopilot-linux -f
       - run: 
+          name: Clean up
+          command: yarn purge
+      - run: 
           name: Install dependencies
           command: yarn install
       - run: 
