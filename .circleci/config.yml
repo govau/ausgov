@@ -2,48 +2,42 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11.3-stretch-browsers
-    branches:
-      only:
-        - develop
-        - issue/9-Setup-deployment-workflow
+      - image: circleci/node:8.11.3
     environment:
-      NODE_ENV: "production"
+      NODE_ENV: "production" # Won't install anything from devDependencies
     steps:
       - checkout
-      - run:
-          name: Install Cloud Foundry CLI Dependencies
-          command: |
-            sudo apt update
-            sudo apt install apt-transport-https apt-utils
-      - run: 
-          name: Node version log
-          command: |
-            node --version
-            npm --version
-            yarn --version
-      - run:
-          name: Install Cloud Foundry CLI
-          command: |
-            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            sudo apt update && sudo apt install cf-cli
-            cf --version
-            cf install-plugin https://github.com/contraband/autopilot/releases/download/0.0.6/autopilot-linux -f
-      - run: 
-          name: Clean up
-          command: yarn purge
       - run: 
           name: Install dependencies
           command: yarn install
-      - run:
-          name: Setup design system
-          command: yarn pancake
       - run: 
           name: Build alpha.australia.gov.au
           command: yarn build
-      - run: 
-          name: Deploy app
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - ./deploy
+            - ./public
+  deploy:
+    docker:
+      - image: govau/cf-cli
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Deploying to cloud.gov.au
           command: |
-            cf login -a api.system.y.cld.gov.au -o dta -s ausgov -u $CF_STAG_USER -p $CF_STAG_PASS
+            cf login -a api.system.y.cld.gov.au -o dta -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
             cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - issue/9-Setup-deployment-workflow
+      - deploy:
+          requires:
+            - build
