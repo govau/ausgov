@@ -1,12 +1,12 @@
 ---
 applications:
 - name: ausgov
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
-  memory: 64M
+  buildpack: nodejs_buildpack
+  memory: 128M
   instances: 1
   path: ./
   env: 
     OPTIMIZE_MEMORY: true
-
+    NODE_ENV: production
 routes:
-- route: TODO
+- route: alpha.australia.gov.au
