@@ -25,6 +25,7 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"purge": "rm -rf ./node_modules",
 		"start": "yarn build && node ./src/server/index.js",
 		"build": "gatsby build",
 		"dev": "gatsby develop",
