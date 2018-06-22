@@ -12,6 +12,7 @@
 -   Added placeholder `.circleci` workflow
 -   Modified circleci placeholder to follow CircleCI 2.0 syntax (docker)
 -   Added banner with text
+-   Removed `@gov.au/accordion` banner for stock banner.
 
 ## 0.0.1
 
