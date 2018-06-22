@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11.3
+      - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
     environment:
       NODE_ENV: "production" # Won't install anything from devDependencies
     steps:
@@ -37,7 +37,7 @@ workflows:
           filters:
             branches:
               only:
-                - issue/9-Setup-deployment-workflow
+                - develop
       - deploy:
           requires:
             - build
