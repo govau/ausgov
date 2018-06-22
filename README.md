@@ -1,5 +1,6 @@
 # australia.gov.au
 
+[![CircleCI](https://circleci.com/gh/adamzerella/ausgov.svg?style=svg)](https://circleci.com/gh/adamzerella/ausgov)
 [![GitHub stars](https://img.shields.io/github/stars/adamzerella/ausgov.svg)](https://github.com/adamzerella/ausgov/stargazers)
 [![GitHub license](https://img.shields.io/github/license/adamzerella/ausgov.svg)](https://github.com/adamzerella/ausgov/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/adamzerella/ausgov.svg)](https://github.com/adamzerella/ausgov/issues)

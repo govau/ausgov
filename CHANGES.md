@@ -17,6 +17,7 @@
 -   Installed and configured `gatsby-plugin-sitemap` and `gatsby-plugin-robots-txt`
 -   Finalised CircleCI configuration for develop branch only.
 -   Updated `siteUrl` and meta information to improve and reflect staging CF env
+-   Added CircleCI status badge to README
 
 ## 0.0.1
 
