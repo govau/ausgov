@@ -18,6 +18,8 @@
 -   Finalised CircleCI configuration for develop branch only.
 -   Updated `siteUrl` and meta information to improve and reflect staging CF env
 -   Added CircleCI status badge to README
+-   Integrated `eslint` and into project
+-   Installed and configured `husky` with precommit hook for formatting
 
 ## 0.0.1
 
