@@ -1,6 +1,4 @@
 ---
 path: "/"
-title: "Australian Information"
+title: "Index"
 ---
-
-blah blah
