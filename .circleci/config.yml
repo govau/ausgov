@@ -1,29 +1,38 @@
 version: 2
 jobs:
-  build:
+  build-ausgov:
     docker:
       - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
     environment:
       NODE_ENV: "production" # Won't install anything from devDependencies
     steps:
       - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
           command: yarn install
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules/
       - run: 
           name: Build alpha.australia.gov.au
           command: yarn build
       - persist_to_workspace:
-          root: ~/project
+          root: ~/project # /home/circleci/project
           paths:
             - ./deploy
             - ./public
-  deploy:
+  deploy-stag:
     docker:
       - image: govau/cf-cli
     steps:
       - attach_workspace:
-          at: ~/project
+          at: ~/project # /home/root/project
       - run:
           name: Deploying to cloud.gov.au
           command: |
@@ -33,11 +42,11 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build:
+      - build-ausgov:
           filters:
             branches:
               only:
                 - develop
-      - deploy:
+      - deploy-stag:
           requires:
-            - build
+            - build-ausgov
