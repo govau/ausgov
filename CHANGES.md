@@ -23,6 +23,7 @@
 -   Added 404 error page
 -   Integrated `eslint` and into project
 -   Installed and configured `husky` with precommit hook for formatting
+-   Modified circle build config to correct yarn caching issues.
 
 ## 0.0.1
 

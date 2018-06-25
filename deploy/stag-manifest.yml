@@ -5,3 +5,5 @@ applications:
   memory: 256M
   instances: 1
   path: "../public"
+  routes:
+    - "ausgovtest.apps.y.cld.gov.au"

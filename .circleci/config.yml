@@ -3,22 +3,28 @@ jobs:
   build-ausgov:
     docker:
       - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
+    machine:
+      pre:
+        - mkdir ~/.yarn-cache
+    dependencies:
+      cache_directories:
+        - ~/.yarn-cache
     environment:
       NODE_ENV: "production" # Won't install anything from devDependencies.
     steps:
       - checkout
-      # - restore_cache:
-      #     name: Restore Yarn Package Cache
-      #     keys:
-      #       - m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - m2-yarn-packages-{{ checksum "yarn.lock" }}-circle-{{ .Environment.CIRCLE_SHA1 }}
       - run: 
           name: Install dependencies
-          command: yarn install
-      # - save_cache:
-      #     name: Save Yarn Package Cache
-      #     key: m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-      #     paths:
-      #       - ./node_modules/
+          command: yarn install --cache-folder ~/.yarn-cache
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: m2-yarn-packages-{{ checksum "yarn.lock" }}-circle-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - node_modules/
       - run: 
           name: Build alpha.australia.gov.au
           command: yarn build
@@ -46,7 +52,7 @@ workflows:
           filters:
             branches:
               only:
-                - develop
+                - issue/34-Resolve-circleci-asset-cache # Testing
       - deploy-stag:
           requires:
             - build-ausgov
