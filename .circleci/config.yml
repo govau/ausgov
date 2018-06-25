@@ -10,13 +10,13 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - m1-yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - m2-yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
           command: yarn install
       - save_cache:
           name: Save Yarn Package Cache
-          key: m1-yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: m2-yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules/
       - run: 
