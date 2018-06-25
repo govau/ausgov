@@ -18,6 +18,7 @@
 -   Finalised CircleCI configuration for develop branch only.
 -   Updated `siteUrl` and meta information to improve and reflect staging CF env
 -   Added CircleCI status badge to README
+-   Added 404 error page
 
 ## 0.0.1
 
