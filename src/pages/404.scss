@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.error-heading {
+    @include AU-fontgrid(xl, heading);
+}
+
+.visit-home-link {
+    text-decoration: none !important;
+    border-bottom: none;
+}
