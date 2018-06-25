@@ -8,7 +8,8 @@ import Footer from "../components/footer";
 import favicon from "../assets/favicon.ico";
 
 import "./index.scss";
-import "../../pancake/css/pancake.min.css";
+
+const description = "Australian Government information";
 
 const Layout = ({ children, data }) => (
 	<main class="au-grid">
@@ -16,7 +17,10 @@ const Layout = ({ children, data }) => (
 			<Helmet
 				title={data.site.siteMetadata.title}
 				meta={[
-					{ name: "description", content: "Australian information" },
+					{
+						name: "description",
+						content: `${description}`,
+					},
 					{
 						name: "keywords",
 						content: `australia, ausgov, australia.gov.au, 
@@ -26,7 +30,28 @@ const Layout = ({ children, data }) => (
 						name: "og:title",
 						content: `${data.site.siteMetadata.title}`,
 					},
-					{ name: "og:url", content: "https://ausgov.gov.au" },
+					{
+						name: "og:url",
+						content: `${data.site.siteMetadata.siteUrl}`,
+					},
+					{ name: "og:description", content: `${description}` },
+					{
+						name: "og:site_name",
+						content: `${data.site.siteMetadata.title}`,
+					},
+					{ name: "twitter:site", content: "@ausgov" },
+					{
+						name: "twitter:title",
+						content: `${data.site.siteMetadata.title}`,
+					},
+					{
+						name: "twitter:description",
+						content: `${description}`,
+					},
+					{
+						name: "twitter:creator",
+						content: "@dta",
+					},
 					{ name: "charset", content: "utf-8" },
 				]}
 				link={[

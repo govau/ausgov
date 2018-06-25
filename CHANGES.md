@@ -12,6 +12,15 @@
 -   Added placeholder `.circleci` workflow
 -   Modified circleci placeholder to follow CircleCI 2.0 syntax (docker)
 -   Added banner with text
+-   Removed `@gov.au/accordion` banner for stock banner.
+-   Added `engines` key in package.json to specify CF version
+-   Updated `deploy/xxxx-manifest` configurations for CF.
+-   Added start command to CF manifest.
+-   Installed and configured `gatsby-plugin-sitemap` and `gatsby-plugin-robots-txt`
+-   Finalised CircleCI configuration for develop branch only.
+-   Updated `siteUrl` and meta information to improve and reflect staging CF env
+-   Added CircleCI status badge to README
+
 
 ## 0.0.1
 
