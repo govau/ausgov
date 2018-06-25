@@ -1,34 +1,52 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
-  build:
+  build-ausgov:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:8.11.3
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+      - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
+    environment:
+      NODE_ENV: "production" # Won't install anything from devDependencies
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
+          name: Restore Yarn Package Cache
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: yarn install
-
+            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run: 
+          name: Install dependencies
+          command: yarn install
       - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - ./node_modules/
+      - run: 
+          name: Build alpha.australia.gov.au
+          command: yarn build
+      - persist_to_workspace:
+          root: ~/project # /home/circleci/project
+          paths:
+            - ./deploy
+            - ./public
+  deploy-stag:
+    docker:
+      - image: govau/cf-cli
+    steps:
+      - attach_workspace:
+          at: ~/project # /home/root/project
+      - run:
+          name: Deploying to cloud.gov.au
+          command: |
+            cf login -a api.system.y.cld.gov.au -o dta -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
+            cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build-ausgov:
+          filters:
+            branches:
+              only:
+                - develop
+      - deploy-stag:
+          requires:
+            - build-ausgov
