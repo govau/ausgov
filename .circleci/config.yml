@@ -4,19 +4,19 @@ jobs:
     docker:
       - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
     environment:
-      NODE_ENV: "production" # Won't install anything from devDependencies
+      NODE_ENV: "production" # Won't install anything from devDependencies.
     steps:
       - checkout
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
           command: yarn install
       - save_cache:
           name: Save Yarn Package Cache
-          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules/
       - run: 
