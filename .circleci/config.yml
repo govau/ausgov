@@ -7,18 +7,18 @@ jobs:
       NODE_ENV: "production" # Won't install anything from devDependencies.
     steps:
       - checkout
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      # - restore_cache:
+      #     name: Restore Yarn Package Cache
+      #     keys:
+      #       - m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
           command: yarn install
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-          paths:
-            - ./node_modules/
+      # - save_cache:
+      #     name: Save Yarn Package Cache
+      #     key: m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      #     paths:
+      #       - ./node_modules/
       - run: 
           name: Build alpha.australia.gov.au
           command: yarn build
