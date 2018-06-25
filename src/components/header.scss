@@ -28,60 +28,15 @@
 	font-weight: normal !important;
 }
 
-.offical-banner {
-	height: 48px;
-	background-color: #212121;
+.official-banner {
+	border-bottom: solid 0.25rem $banner-border-bottom;
+	padding: 0.5rem;
+	text-align: center;
+	font-family: $AU-font;
 
-	.offical-title {
-		font-weight: bold;
-		font-size: 0.75rem;
-	}
-
-	.offical-subline {
-		text-decoration: underline;
-		font-size: 0.75rem;
-	}
-
-	.offical-logo img {
-		width: 16px;
-		height: 16px;
-		vertical-align: sub;
-	}
-
-	.offical-link {
-		float: right;
-		color: white;
-		margin-right: 16px;
-		margin-top: 12px;
-		font-size: 14px;
-		font-family: $AU-font;
-		font-size: 0.75rem;
-	}
-
-	.au-accordion {
-		float: left;
-		border: none;
-	}
-
-	.au-accordion > a {
-		padding: auto;
-		background-color: #212121;
-		color: white;
+	a {
 		text-decoration: none;
-		text-anchor: middle;
-	}
-
-	.au-accordion__title {
-		font-size: 14px;
-		font-weight: normal;
-		border-bottom: none;
-	}
-
-	.au-accordion__body-wrapper {
-		background-color: #212121;
-		color: white;
-		border: none;
-		width: 100%;
+		color: black;
 	}
 }
 

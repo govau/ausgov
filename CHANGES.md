@@ -11,6 +11,8 @@
 -   Installed `@gov.au/grid-12` component, added to index page.
 -   Added placeholder `.circleci` workflow
 -   Modified circleci placeholder to follow CircleCI 2.0 syntax (docker)
+-   Added banner with text
+-   Removed `@gov.au/accordion` banner for stock banner.
 -   Added `engines` key in package.json to specify CF version
 -   Updated `deploy/xxxx-manifest` configurations for CF.
 -   Added start command to CF manifest.
