@@ -7,21 +7,21 @@ jobs:
       NODE_ENV: "production" # Won't install anything from devDependencies.
     steps:
       - checkout
-      # - restore_cache:
-      #     name: Restore Yarn Package Cache
-      #     keys:
-      #       - m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - m3-yarn-packages-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
-          command: yarn install
-      # - save_cache:
-      #     name: Save Yarn Package Cache
-      #     key: m2-yarn-packages-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-      #     paths:
-      #       - ./node_modules/
+          command: yarn install --force # Build fails when restoring modules from cache for now :'(
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: m3-yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
       - run: 
           name: Build alpha.australia.gov.au
-          command: yarn build
+          command: yarn run build
       - persist_to_workspace:
           root: ~/project # /home/circleci/project
           paths:
@@ -46,7 +46,7 @@ workflows:
           filters:
             branches:
               only:
-                - develop
+                - issue/34-Resolve-circleci-asset-cache # Testing
       - deploy-stag:
           requires:
             - build-ausgov
