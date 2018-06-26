@@ -23,6 +23,7 @@
 -   Added 404 error page
 -   Integrated `eslint` and into project
 -   Installed and configured `husky` with precommit hook for formatting
+-   Added `lang` meta tag
 
 ## 0.0.1
 

@@ -53,6 +53,7 @@ const Layout = ({ children, data }) => (
 						content: "@dta",
 					},
 					{ name: "charset", content: "utf-8" },
+					{ name: "lang", content: "en-AU" },
 				]}
 				link={[
 					{
