@@ -27,7 +27,7 @@
 -   Added `lang` meta tag
 -   Text changes to `header`
 -   Added placeholder icons
-
+-   Filled in blue placeholder boxes with placeholder icons
 
 ## 0.0.1
 

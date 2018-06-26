@@ -9,9 +9,16 @@
 	}
 
 	.col-xs-4 {
+		display: grid;
 		margin: 1em;
 		height: 196px;
 		width: 196px;
-		background-color: $AU-colordark-foreground-action;
+		font-family: $AU-font;
+		text-align: center;
+		.icon {
+			width: 128px;
+			height: 128px;
+			margin: 0 auto;
+		}
 	}
 }
