@@ -24,6 +24,7 @@
 -   Integrated `eslint` and into project
 -   Installed and configured `husky` with precommit hook for formatting
 -   Added `lang` meta tag
+-   Text changes to `header`
 
 ## 0.0.1
 
