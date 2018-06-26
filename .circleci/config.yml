@@ -3,12 +3,6 @@ jobs:
   build-ausgov:
     docker:
       - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
-    machine:
-      pre:
-        - mkdir ~/.yarn-cache
-    dependencies:
-      cache_directories:
-        - ~/.yarn-cache
     environment:
       NODE_ENV: "production" # Won't install anything from devDependencies.
     steps:
@@ -16,18 +10,18 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - m2-yarn-packages-{{ checksum "yarn.lock" }}-circle-{{ .Environment.CIRCLE_SHA1 }}
+            - m3-yarn-packages-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
-          command: yarn install --cache-folder ~/.yarn-cache
+          command: yarn install --force # Build fails when restoring modules from cache for now :'(
       - save_cache:
           name: Save Yarn Package Cache
-          key: m2-yarn-packages-{{ checksum "yarn.lock" }}-circle-{{ .Environment.CIRCLE_SHA1 }}
+          key: m3-yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
       - run: 
           name: Build alpha.australia.gov.au
-          command: yarn build
+          command: yarn run build
       - persist_to_workspace:
           root: ~/project # /home/circleci/project
           paths:
