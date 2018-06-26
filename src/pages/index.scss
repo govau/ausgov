@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.index {
+	width: 100%;
+
+	.container-fluid {
+		margin: 0 auto;
+		width: 50%;
+	}
+
+	.col-xs-4 {
+		margin: 1em;
+		height: 196px;
+		width: 196px;
+		background-color: $AU-colordark-foreground-action;
+	}
+}

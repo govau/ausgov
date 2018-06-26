@@ -23,9 +23,11 @@
 -   Added 404 error page
 -   Integrated `eslint` and into project
 -   Installed and configured `husky` with precommit hook for formatting
+-   Added placeholder boxes for future icons on index page.
 -   Added `lang` meta tag
 -   Text changes to `header`
 -   Added placeholder icons
+
 
 ## 0.0.1
 
