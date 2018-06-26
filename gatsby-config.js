@@ -24,5 +24,14 @@ module.exports = {
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
+		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: "UA-121395861-1", // Staging
+				head: true,
+				anonymize: false,
+				respectDNT: true,
+			},
+		},
 	],
 };

@@ -30,6 +30,7 @@
 -   Filled in blue placeholder boxes with placeholder icons
 -   Added temporay placeholder icons
 -   Removed temporary placeholder watermarks
+-   Installed and configured Google Analytics tracking information
 
 ## 0.0.1
 
