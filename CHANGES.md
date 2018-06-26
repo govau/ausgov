@@ -28,6 +28,8 @@
 -   Text changes to `header`
 -   Added placeholder icons
 -   Filled in blue placeholder boxes with placeholder icons
+-   Added temporay placeholder icons
+-   Removed temporary placeholder watermarks
 
 ## 0.0.1
 
