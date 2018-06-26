@@ -26,8 +26,8 @@
 -   Added placeholder boxes for future icons on index page.
 -   Added `lang` meta tag
 -   Text changes to `header`
--   Added placeholder icons
-
+-   Added temporay placeholder icons
+-   removed temporary placeholder watermarks
 
 ## 0.0.1
 
