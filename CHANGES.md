@@ -31,6 +31,11 @@
 -   Added temporay placeholder icons
 -   Removed temporary placeholder watermarks
 -   Installed and configured Google Analytics tracking information
+-   Updated site title to `alpha.australia.gov.au`
+-   Removed text from `australia.svg` icon
+-   CSS tweaks for apperance and mobile responsiveness
+-   Added placeholder content to `/about`, `/accessibility` and `/privacy`
+-   Added `Our Country` icon
 
 ## 0.0.1
 

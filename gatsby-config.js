@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: "australia.gov.au",
+		title: "alpha.australia.gov.au",
 		siteUrl: `https://ausgov.apps.y.cld.gov.au/`,
 	},
 	plugins: [
