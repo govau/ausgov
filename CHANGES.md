@@ -25,6 +25,7 @@
 -   Installed and configured `husky` with precommit hook for formatting
 -   Added `lang` meta tag
 -   Text changes to `header`
+-   Added placeholder icons
 
 ## 0.0.1
 
