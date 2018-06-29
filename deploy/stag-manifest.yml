@@ -6,4 +6,4 @@ applications:
   instances: 1
   path: "../public"
   routes:
-    - route: ausgov1.apps.y.cld.gov.au
+    - route: ausgov.apps.y.cld.gov.au

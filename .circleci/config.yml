@@ -7,23 +7,20 @@ jobs:
       NODE_ENV: "production" # Won't install anything from devDependencies.
     steps:
       - checkout
-      # - run: 
-      #     name: Set Yarn cache folder
-      #     command: yarn config set cache-folder .yarn # the .cache default was restoring empty
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - m11-yarn-packages-{{ checksum "package.json" }}-lock-{{ checksum "yarn.lock" }}
+            - m1-yarn-packages-{{ checksum "package.json" }}-lock-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
-          command: yarn install
+          command: yarn install --cache-folder ./.cache
       - save_cache:
           name: Save Yarn Package Cache
-          key: m11-yarn-packages-{{ checksum "package.json" }}-lock-{{ checksum "yarn.lock" }}
+          key: m1-yarn-packages-{{ checksum "package.json" }}-lock-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
             - ./pancake
-            - ./.yarn
+            - ./.cache
       - run: 
           name: Build alpha.australia.gov.au
           command: yarn run build
@@ -42,7 +39,7 @@ jobs:
           name: Deploying to cloud.gov.au
           command: |
             cf login -a api.system.y.cld.gov.au -o dta -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
-            cf zero-downtime-push ausgov1 -f ./deploy/stag-manifest.yml
+            cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
 workflows:
   version: 2
   build-and-deploy:
@@ -51,7 +48,7 @@ workflows:
           filters:
             branches:
               only:
-                - issue/34-Resolve-circleci-asset-cache # Testing
+                - develop
       - deploy-stag:
           requires:
             - build-ausgov
