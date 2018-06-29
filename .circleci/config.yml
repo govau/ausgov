@@ -10,13 +10,13 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - m1-yarn-packages-{{ checksum "package.json" }}-lock-{{ checksum "yarn.lock" }}
+            - m1-yarn-packages-lock-{{ checksum "yarn.lock" }}
       - run: 
           name: Install dependencies
           command: yarn install --cache-folder ./.cache
       - save_cache:
           name: Save Yarn Package Cache
-          key: m1-yarn-packages-{{ checksum "package.json" }}-lock-{{ checksum "yarn.lock" }}
+          key: m1-yarn-packages-lock-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
             - ./pancake
