@@ -27,6 +27,7 @@
 -   Added 404 error page
 -   Integrated `eslint` and into project
 -   Installed and configured `husky` with precommit hook for formatting
+-   Modified circle build config to correct yarn caching issues.
 -   Added placeholder boxes for future icons on index page.
 -   Added `lang` meta tag
 -   Text changes to `header`
