@@ -1,6 +1,6 @@
 ## 0.0.3
 
--
+-   Migrated contactus, copyright, terms of use pages
 
 ## 0.0.2
 
