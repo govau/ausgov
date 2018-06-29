@@ -16,12 +16,12 @@ const Footer = () => (
 						text: "About",
 					},
 					{
-						link: "/accessibility",
-						text: "Accessibility",
-					},
-					{
 						link: "/privacy",
 						text: "Privacy",
+					},
+					{
+						link: "/accessibility",
+						text: "Accessibility",
 					},
 				]}
 				linkComponent={Link}

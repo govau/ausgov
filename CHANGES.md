@@ -1,3 +1,7 @@
+## 0.0.3
+
+-
+
 ## 0.0.2
 
 -   Moved pages from `src/pages/markdown` to `src/pages`
@@ -24,6 +28,19 @@
 -   Integrated `eslint` and into project
 -   Installed and configured `husky` with precommit hook for formatting
 -   Modified circle build config to correct yarn caching issues.
+-   Added placeholder boxes for future icons on index page.
+-   Added `lang` meta tag
+-   Text changes to `header`
+-   Added placeholder icons
+-   Filled in blue placeholder boxes with placeholder icons
+-   Added temporay placeholder icons
+-   Removed temporary placeholder watermarks
+-   Installed and configured Google Analytics tracking information
+-   Updated site title to `alpha.australia.gov.au`
+-   Removed text from `australia.svg` icon
+-   CSS tweaks for apperance and mobile responsiveness
+-   Added placeholder content to `/about`, `/accessibility` and `/privacy`
+-   Added `Our Country` icon
 
 ## 0.0.1
 

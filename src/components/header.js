@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
 				brandImageAlt="australia.gov.au"
 				subline={
 					<div>
-						Helping you find government information{" "}
+						Helping you find Australian information{" "}
 						<span className="alpha-badge">
 							alpha{` ${version}`}
 						</span>

@@ -6,23 +6,36 @@ html {
 	padding: 0;
 }
 
-a,
-a:active {
-	color: white;
-	text-decoration: none;
-	border-bottom: 1px solid $text-underline;
-}
-
 .app-container {
 	margin: 0;
 	padding: 0;
 	display: flex;
 	min-height: 100vh;
-	min-width: 100vw;
 	flex-direction: column;
 }
 
 .au-body {
 	padding: 16px;
 	flex: 1;
+	p {
+		a {
+			text-decoration: none;
+			border-bottom: 1px solid $text-underline;
+		}
+		a:hover {
+			color: $AU-colordark-foreground-action;
+			transition: 0.25s;
+		}
+	}
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid $text-underline;
+}
+
+a:hover {
+	color: $AU-colordark-foreground-action;
+	transition: 0.25s;
 }

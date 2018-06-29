@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.index {
+	margin: 0;
+
+	.row {
+		margin: 0 auto;
+		width: 50%;
+	}
+
+	.col-xs-4 {
+		display: grid;
+		margin: 1rem;
+		font-family: $AU-font;
+		text-align: center;
+		width: 164px;
+
+		a {
+			border-bottom: none;
+		}
+
+		.icon {
+			width: 128px;
+			height: 128px;
+			margin: 0;
+		}
+	}
+}

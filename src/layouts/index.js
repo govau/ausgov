@@ -12,7 +12,7 @@ import "./index.scss";
 const description = "Australian Government information";
 
 const Layout = ({ children, data }) => (
-	<main class="au-grid">
+	<main className="au-grid">
 		<div className="app-container">
 			<Helmet
 				title={data.site.siteMetadata.title}
@@ -53,6 +53,7 @@ const Layout = ({ children, data }) => (
 						content: "@dta",
 					},
 					{ name: "charset", content: "utf-8" },
+					{ name: "lang", content: "en-AU" },
 				]}
 				link={[
 					{
