@@ -43,6 +43,7 @@
 		"precommit": "pretty-quick --staged"
 	},
 	"devDependencies": {
+		"@gov.au/select": "^2.0.5",
 		"babel-eslint": "^8.2.4",
 		"eslint": "^5.0.0",
 		"eslint-config-react-app": "^2.1.0",

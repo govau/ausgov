@@ -30,7 +30,7 @@ class Index extends React.Component {
 						School Timetables
 					</div>
 					<div className="col-xs-4">
-						<Link to="">
+						<Link to="/holiday">
 							<img
 								className="icon"
 								src={publicHolidayIcon}
@@ -49,6 +49,8 @@ class Index extends React.Component {
 						</Link>
 						Telephone Codes
 					</div>
+				</div>
+				<div className="row">
 					<div className="col-xs-4">
 						<Link to="">
 							<img
