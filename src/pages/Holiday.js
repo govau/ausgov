@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { holidays } from "../assets/holidays.js";
 import moment from "moment";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import "./Holiday.scss";
 
 class Holiday extends Component {
 	constructor(props) {
@@ -68,12 +70,9 @@ class Holiday extends Component {
 	renderMatchingHolidays = () => {
 		if (this.state.matchingHolidays) {
 			return this.state.matchingHolidays.map((holiday, i) => (
-				<div key={i}>
-					<p>
-						{holiday.Date} - {holiday["Holiday Name"]}
-					</p>
-					<br />
-				</div>
+				<p key={i}>
+					{holiday.Date} - {holiday["Holiday Name"]}
+				</p>
 			));
 		}
 	};
@@ -97,10 +96,16 @@ class Holiday extends Component {
 							</option>
 						);
 					})}
-				</select>{" "}
+				</select>
 				<br />
 				<br />
-				{this.renderMatchingHolidays()}
+				<ReactCSSTransitionGroup
+					transitionName="example"
+					transitionEnterTimeout={800}
+					transitionLeaveTimeout={800}
+				>
+					{this.renderMatchingHolidays()}
+				</ReactCSSTransitionGroup>
 			</div>
 		);
 	}
