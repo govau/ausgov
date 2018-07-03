@@ -1,6 +1,6 @@
 ## 0.0.3
 
--
+-   Added public holiay feature
 
 ## 0.0.2
 
