@@ -8,7 +8,6 @@ import Footer from "../components/footer";
 import favicon from "../assets/favicon.ico";
 
 import "./index.scss";
-import NextHoliday from "../components/NextHoliday";
 
 const description = "Australian Government information";
 

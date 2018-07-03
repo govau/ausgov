@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { holidays } from "../assets/holidays.js";
-import moment from "moment";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import "./Holiday.scss";
+import { AUcalloutCalendar } from "@gov.au/callout";
+import moment from "moment";
 
 class Holiday extends Component {
 	constructor(props) {
@@ -10,33 +11,32 @@ class Holiday extends Component {
 		this.state = {
 			holidays,
 			states: ["NATIONAL", "NT", "NSW", "VIC", "TAS", "SA", "ACT", "WA"],
-			matchingHolidays: [],
+			nextHoliday: [],
+			stateSelected: "NATIONAL",
 		};
 	}
 
-	renderHolidays() {
-		var firstHoliday = this.getNextDate(this.state.holidays, new Date());
-		var secondHolidayId = firstHoliday[0]._id + 1;
-		var secondHoliday = this.state.holidays.filter(
-			holiday => holiday._id === secondHolidayId
-		);
-		var thirdHolidayId = secondHoliday[0]._id + 1;
-		var thirdHoliday = this.state.holidays.filter(
-			holiday => holiday._id === thirdHolidayId
-		);
-		const holidays = [firstHoliday, secondHoliday, thirdHoliday];
-		return holidays.map((holiday, i) => (
-			<p key={i}>
-				{holiday[0]["Holiday Name"]} - {holiday[0].Date} -{" "}
-				{holiday[0]["Applicable To"]}
-			</p>
-		));
+	componentWillMount() {
+		var nextHoliday = this.getNextDate(holidays, new Date(), true);
+		this.setState({ nextHoliday });
 	}
 
-	getNextDate = (dates, now) => {
+	/**
+	 * Compares an array of dates to a given date and returns the next date,
+	 * or in this case the object of the next public holiday.
+	 * @param holidays: this is the list of holidays
+	 * @param now: time you want to compare to
+	 * @param isNational: do you want to return a national holiday?
+	 * This is true in the component will mount lifecycle, since we want to load
+	 * a national holiday on page load
+	 */
+	getNextDate = (holidays, now, isNational) => {
 		var closestHolidayDate = Infinity;
 		var nextHolidayId = null;
-		dates.forEach(record => {
+		var filteredHolidays = isNational
+			? holidays.filter(record => record["Applicable To"] === "NATIONAL")
+			: holidays;
+		filteredHolidays.forEach(record => {
 			if (
 				new Date(record.Date) > now &&
 				new Date(record.Date) < closestHolidayDate
@@ -50,62 +50,83 @@ class Holiday extends Component {
 		);
 	};
 
+	/**
+	 * Fires when the dropdown filter is changed. It updates the list of public holidays
+	 * in the component state according to the state selected in the drop down box
+	 */
 	changeRegion = event => {
-		if (event.target.value === "none") {
-			this.setState({ matchingHolidays: [] });
+		const stateSelected = event.target.value;
+		if (stateSelected === "none") {
 			return null;
 		} else {
-			var matchingHolidays = this.state.holidays.filter(
+			var stateHolidays = this.state.holidays.filter(
 				record =>
-					record["Applicable To"].includes(event.target.value) ||
-					record["Applicable To"].includes("NAT")
+					record["Applicable To"].includes(stateSelected) ||
+					record["Applicable To"].includes("NATIONAL")
 			);
-			var upcomingMatchingHolidays = matchingHolidays.filter(
-				holiday => new Date(holiday.Date) > new Date()
+			var nextHoliday = this.getNextDate(
+				stateHolidays,
+				new Date(),
+				false
 			);
-			this.setState({ matchingHolidays: upcomingMatchingHolidays });
+			this.setState({ nextHoliday, stateSelected });
 		}
 	};
 
-	renderMatchingHolidays = () => {
-		if (this.state.matchingHolidays) {
-			return this.state.matchingHolidays.map((holiday, i) => (
-				<p key={i}>
-					{holiday.Date} - {holiday["Holiday Name"]}
-				</p>
-			));
-		}
-	};
+	/**
+	 * Renders the next holiday on the page for the given region
+	 */
+	renderNextHoliday() {
+		var firstHoliday = this.state.nextHoliday;
+		return (
+			<div key="one">
+				<AUcalloutCalendar
+					description="Callout calendar"
+					time={moment(firstHoliday[0].Date, "YYYY/MM/DD").format(
+						"DD MMMM"
+					)}
+					subline={
+						"The next public holiday (" +
+						this.state.stateSelected +
+						") is "
+					}
+					name={firstHoliday[0]["Holiday Name"]}
+				/>
+				<span>{firstHoliday[0].Information}</span>
+			</div>
+		);
+	}
 
 	render() {
 		return (
-			<div className="au-body">
-				<h1>Upcoming Holidays</h1>
-				{this.renderHolidays()}
-				<h2>Check Upcoming Holidays For Your State</h2>
-				<select
-					id="state-select"
-					className="au-select"
-					onChange={this.changeRegion}
-				>
-					<option value="none">Please select</option>
-					{this.state.states.map((state, i) => {
-						return (
-							<option value={state} key={i}>
-								{state}
-							</option>
-						);
-					})}
-				</select>
-				<br />
-				<br />
-				<ReactCSSTransitionGroup
-					transitionName="example"
-					transitionEnterTimeout={800}
-					transitionLeaveTimeout={800}
-				>
-					{this.renderMatchingHolidays()}
-				</ReactCSSTransitionGroup>
+			<div className="row">
+				<div className="col-sm-4">
+					<h2>Check Upcoming Holidays For Your State</h2>
+					<select
+						id="state-select"
+						className="au-select"
+						onChange={this.changeRegion}
+					>
+						<option value="none">Please select</option>
+						{this.state.states.map((state, i) => {
+							return (
+								<option value={state} key={i}>
+									{state}
+								</option>
+							);
+						})}
+					</select>
+					<br />
+				</div>
+				<div className="col-sm-8">
+					<ReactCSSTransitionGroup
+						transitionName="example"
+						transitionEnterTimeout={800}
+						transitionLeaveTimeout={800}
+					>
+						{this.renderNextHoliday()}
+					</ReactCSSTransitionGroup>
+				</div>
 			</div>
 		);
 	}

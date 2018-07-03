@@ -166,7 +166,7 @@ export const holidays = [
 		Date: "2018/08/06",
 		"Holiday Name": "Picnic Day",
 		Information:
-			"Observed on the first Monday of August each year and is clebrated with a horse race, railway picnic and other social outings",
+			"Picnic Day is observed in Australia’s Northern Territory on the first Monday of August each year. It serves as an extra day of rest for workers as well as part of a long weekend for various events, such as the Harts Range annual races.",
 		"More Information":
 			"http://www.ocpe.nt.gov.au/working_in_the_ntps/legislation/public_holidays%0A",
 		"Applicable To": "NT",
