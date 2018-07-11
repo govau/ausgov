@@ -5,3 +5,5 @@ applications:
   memory: 128M
   instances: 1
   path: "../public"
+  routes:
+    - route: ausgov.apps.y.cld.gov.au

@@ -1,6 +1,7 @@
 ## 0.0.3
 
 -   Added public holiay feature
+-   Migrated contact us, copyright, terms of use pages
 
 ## 0.0.2
 
@@ -27,6 +28,7 @@
 -   Added 404 error page
 -   Integrated `eslint` and into project
 -   Installed and configured `husky` with precommit hook for formatting
+-   Modified circle build config to correct yarn caching issues.
 -   Added placeholder boxes for future icons on index page.
 -   Added `lang` meta tag
 -   Text changes to `header`
