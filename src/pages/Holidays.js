@@ -118,15 +118,7 @@ class Holiday extends Component {
 					</select>
 					<br />
 				</div>
-				<div className="col-sm-8">
-					<ReactCSSTransitionGroup
-						transitionName="example"
-						transitionEnterTimeout={800}
-						transitionLeaveTimeout={800}
-					>
-						{this.renderNextHoliday()}
-					</ReactCSSTransitionGroup>
-				</div>
+				<div className="col-sm-8">{this.renderNextHoliday()}</div>
 			</div>
 		);
 	}
