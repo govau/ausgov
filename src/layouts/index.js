@@ -62,7 +62,9 @@ const Layout = ({ children, data }) => (
 						href: `${favicon}`,
 					},
 				]}
-			/>
+			>
+				<html lang="en" />
+			</Helmet>
 			<Header siteTitle={data.site.siteMetadata.title} />
 			<div className="au-body">{children()}</div>
 			<br />
