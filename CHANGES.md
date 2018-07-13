@@ -1,6 +1,8 @@
 ## 0.0.3
 
 -   Migrated contactus, copyright, terms of use pages
+-   Added links for `our-country` and `time-zones` icon
+-   Added missing content pages
 
 ## 0.0.2
 
