@@ -50,7 +50,7 @@ class Index extends React.Component {
 						Telephone Codes
 					</div>
 					<div className="col-xs-4">
-						<Link to="">
+						<Link to="/time-zones-and-daylight-saving">
 							<img
 								className="icon"
 								src={timezoneIcon}
@@ -70,7 +70,7 @@ class Index extends React.Component {
 						National Symbols
 					</div>
 					<div className="col-xs-4">
-						<Link to="">
+						<Link to="/our-country">
 							<img
 								className="icon"
 								src={countryIcon}
