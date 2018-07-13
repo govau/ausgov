@@ -1,28 +1,28 @@
 ---
-path: /about-australia/our-country/our-people/apology-to-australias-indigenous-peoples/sign-language
-title: Sign language version – Apology to Australia's Indigenous peoples
+path: /audio-description
+title: Audio description version – Apology to Australia's Indigenous peoples
 ---
 
-### Indigenous Viewer Advice
-
 Aboriginal and Torres Strait Islander viewers are advised that the following program may contain images and voices of people who have passed away.
+<br />
+<br />
 
 |           |                                                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title** | **Prime Minister Kevin Rudd, MP – Apology to Australia's Indigenous peoples**                                                                              |
-| Duration  | 4 minutes, 4 seconds                                                                                                                                       |
+| Duration  | 4 minutes, 32 seconds                                                                                                                                      |
 | Recorded  | Wednesday, February 13, 2008, 9:09am AEDT                                                                                                                  |
 | Location  | [Parliament of Australia, House of Representatives](http://www.aph.gov.au/About_Parliament/Parliamentary_Departments/Department_of_Parliamentary_Services) |
 | Author    | [Parliament of Australia - Department of Parliamentary Services](http://www.aph.gov.au/About_Parliament/House_of_Representatives)                          |
 
-### Downloads
+## Downloads
 
 -   [Video: Prime Minister Kevin Rudd, MP - Apology to Australia's Indigenous peoples -audio description version ( WMV )
     29.2MB - 4min, 32sec](https://www.australia.gov.au/sites/default/files/global_site/library/videos/national_apology_audio_desc.wmv)
 -   [Video: Prime Minister Kevin Rudd, MP - Apology to Australia's Indigenous peoples - audio description version ( MOV )
-    16.1MB - 4min, 32sec](https://www.australia.gov.au/sites/default/files/global_site/library/videos/national_apology_audio_desc.wmv)
+    16.1MB - 4min, 32sec](https://www.australia.gov.au/sites/default/files/global_site/library/videos/national_apology_audio_desc.mov)
 -   [Audio: Prime Minister Kevin Rudd, MP - Apology to Australia's Indigenous peoples - audio description version (MP3)
-    1.6MB - 4min, 32sec - 48kbps Mono](https://www.australia.gov.au/sites/default/files/global_site/library/videos/national_apology_audio_desc.wmv)
+    1.6MB - 4min, 32sec - 48kbps Mono](https://www.australia.gov.au/sites/default/files/global_site/library/videos/national_apology_audio_desc.mp3)
 
 ### Apology Transcript
 
@@ -67,10 +67,6 @@ A future where we embrace the possibility of new solutions to enduring problems 
 A future based on mutual respect, mutual resolve and mutual responsibility.
 
 A future where all Australians, whatever their origins, are truly equal partners, with equal opportunities and with an equal stake in shaping the next chapter in the history of this great country, Australia.
-
-## Alternative Formats
-
-You may request a copy of these videos in an alternative format by contacting the [Parliament of Australia Broadcasting Service](http://www.aph.gov.au/News_and_Events/Watch_Parliament/How_do_I_request_a_copy_of_Parliamentary_proceedings).
 
 ## Copyright Notice
 

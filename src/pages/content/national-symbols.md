@@ -1,5 +1,5 @@
 ---
-path: /about-australia/facts-and-figures/national-symbols
+path: /national-symbols
 title: National Symbols
 ---
 

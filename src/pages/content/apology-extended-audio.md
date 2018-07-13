@@ -1,5 +1,5 @@
 ---
-path: /about-australia/our-country/our-people/apology-to-australias-indigenous-peoples/extended-audio
+path: /extended-audio
 title: Extended audio description version – Apology to Australia's Indigenous peoples
 ---
 
