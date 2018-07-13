@@ -1,6 +1,7 @@
 ## 0.0.3
 
 -   Migrated contactus, copyright, terms of use pages
+-   Added content for apology (audio, video, extended), security, domain names, privacy, disclaimer
 
 ## 0.0.2
 
