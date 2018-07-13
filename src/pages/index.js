@@ -80,6 +80,12 @@ class Index extends React.Component {
 						Our Country
 					</div>
 				</div>
+				<br />
+				<hr />
+				<h1>Next public holiday:</h1>
+				<br />
+				<hr />
+				<h1>What's the Government promoting?</h1>
 			</div>
 		);
 	}
