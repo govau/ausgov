@@ -50,37 +50,35 @@ class Index extends React.Component {
 						Telephone Codes
 					</div>
 				</div>
-				<div className="row">
-					<div className="col-xs-4">
-						<Link to="">
-							<img
-								className="icon"
-								src={timezoneIcon}
-								alt="australian time zones"
-							/>
-						</Link>
-						Australian Time Zones
-					</div>
-					<div className="col-xs-4">
-						<Link to="">
-							<img
-								className="icon"
-								src={nationalSymbolIcon}
-								alt="national symbols"
-							/>
-						</Link>
-						National Symbols
-					</div>
-					<div className="col-xs-4">
-						<Link to="">
-							<img
-								className="icon"
-								src={countryIcon}
-								alt="our country"
-							/>
-						</Link>
-						Our Country
-					</div>
+				<div className="col-xs-4">
+					<Link to="">
+						<img
+							className="icon"
+							src={timezoneIcon}
+							alt="australian time zones"
+						/>
+					</Link>
+					Australian Time Zones
+				</div>
+				<div className="col-xs-4">
+					<Link to="">
+						<img
+							className="icon"
+							src={nationalSymbolIcon}
+							alt="national symbols"
+						/>
+					</Link>
+					National Symbols
+				</div>
+				<div className="col-xs-4">
+					<Link to="">
+						<img
+							className="icon"
+							src={countryIcon}
+							alt="our country"
+						/>
+					</Link>
+					Our Country
 				</div>
 			</div>
 		);
