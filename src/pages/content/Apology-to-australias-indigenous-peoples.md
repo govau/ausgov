@@ -1,5 +1,5 @@
 ---
-path: "apology-to-australias-indigenous-peoples"
+path: "/apology-to-australias-indigenous-peoples"
 title: "Apology to Australia's Indigenous peoples"
 ---
 
