@@ -20,7 +20,7 @@ class Index extends React.Component {
 			<div className="index">
 				<div className="row">
 					<div className="col-xs-4">
-						<Link to="">
+						<Link to="/school-term-dates">
 							<img
 								className="icon"
 								src={schoolIcon}
@@ -40,7 +40,7 @@ class Index extends React.Component {
 						Public Holidays
 					</div>
 					<div className="col-xs-4">
-						<Link to="">
+						<Link to="/telephone-country-and-area-codes">
 							<img
 								className="icon"
 								src={telephoneCodesIcon}
@@ -60,7 +60,7 @@ class Index extends React.Component {
 						Australian Time Zones
 					</div>
 					<div className="col-xs-4">
-						<Link to="">
+						<Link to="/national-symbols">
 							<img
 								className="icon"
 								src={nationalSymbolIcon}
