@@ -1,9 +1,7 @@
 ---
 title: Internet Domain Names
-path: /facts-and-figures/internet-domain-names 
+path: /internet-domain-names 
 ---
-
-<div class="domain-name-table">
 
 | Domains | Usage                                                                                                |
 | ------- | ---------------------------------------------------------------------------------------------------- |
@@ -14,5 +12,3 @@ path: /facts-and-figures/internet-domain-names
 | id.au   | For individuals who are Australian citizens or residents.                                            |
 | net.au  | For commercial entities, such as companies and businesses.                                           |
 | org.au  | For charities and non-profit organisations.                                                          |
-
-</div>
