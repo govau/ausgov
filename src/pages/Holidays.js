@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import { holidays } from "../assets/holidays.js";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import "./Holiday.scss";
+import { holidays } from "../components/holidays.js";
 import { AUcalloutCalendar } from "@gov.au/callout";
-import moment from "moment";
 
 class Holiday extends Component {
 	constructor(props) {
@@ -78,13 +75,20 @@ class Holiday extends Component {
 	 */
 	renderNextHoliday() {
 		var firstHoliday = this.state.nextHoliday;
+
 		return (
 			<div key="one">
 				<AUcalloutCalendar
 					description="Callout calendar"
-					time={moment(firstHoliday[0].Date, "YYYY/MM/DD").format(
-						"DD MMMM"
-					)}
+					datetime={new Date(
+						this.state.nextHoliday[0].Date
+					).toISOString()}
+					time={new Date(
+						this.state.nextHoliday[0].Date
+					).toLocaleString("en-AU", {
+						day: "numeric",
+						month: "long",
+					})}
 					subline={
 						"The next public holiday (" +
 						this.state.stateSelected +
