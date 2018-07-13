@@ -1,6 +1,7 @@
 ## 0.0.3
 
 -   Migrated contactus, copyright, terms of use pages
+-   Migrated content pages `telephone country and area codes`,`federation`,`how gov works`, `federation`, `apology to australian indigenous peopls`, `about aus`, `state and territory government`, `school term dates`
 
 ## 0.0.2
 
