@@ -1,5 +1,5 @@
 ---
-path: "/how-government-works/federation"
+path: "federation"
 title: "Federation"
 ---
 
