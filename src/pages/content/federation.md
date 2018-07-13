@@ -1,5 +1,5 @@
 ---
-path: "federation"
+path: "/federation"
 title: "Federation"
 ---
 
