@@ -2,6 +2,9 @@
 
 -   Migrated contactus, copyright, terms of use pages
 -   Migrated content pages `telephone country and area codes`,`federation`,`how gov works`, `federation`, `apology to australian indigenous peoples`, `about aus`, `state and territory government`, `school term dates`
+-   Added content for apology (audio, video, extended), security, domain names, privacy, disclaimer
+-   Added links for `our-country` and `time-zones` icon
+-   Added missing content pages
 
 ## 0.0.2
 
