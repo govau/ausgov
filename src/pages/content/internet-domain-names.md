@@ -3,6 +3,8 @@ title: Internet Domain Names
 path: /internet-domain-names 
 ---
 
+<div class="domain-name-table">
+
 | Domains | Usage                                                                                                |
 | ------- | ---------------------------------------------------------------------------------------------------- |
 | gov.au  | For Commonwealth, state, territory and local government bodies.                                      |
@@ -12,3 +14,5 @@ path: /internet-domain-names
 | id.au   | For individuals who are Australian citizens or residents.                                            |
 | net.au  | For commercial entities, such as companies and businesses.                                           |
 | org.au  | For charities and non-profit organisations.                                                          |
+
+</div>
