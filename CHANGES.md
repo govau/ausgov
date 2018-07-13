@@ -2,6 +2,8 @@
 
 -   Migrated contactus, copyright, terms of use pages
 -   Added content for apology (audio, video, extended), security, domain names, privacy, disclaimer
+-   Added links for `our-country` and `time-zones` icon
+-   Added missing content pages
 
 ## 0.0.2
 
