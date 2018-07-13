@@ -1,5 +1,5 @@
 ---
-path: "/apology-to-australias-indigenous-peoples"
+path: "about-australia/our-country/our-people/apology-to-australias-indigenous-peoples"
 title: "Apology to Australia's Indigenous peoples"
 ---
 
