@@ -5,7 +5,9 @@
 [![GitHub license](https://img.shields.io/github/license/adamzerella/ausgov.svg)](https://github.com/adamzerella/ausgov/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/adamzerella/ausgov.svg)](https://github.com/adamzerella/ausgov/issues)
 
-> Streamlined static site replacement for [australia.gov.au](https://www.australia.gov.au)
+Streamlined static site replacement for [australia.gov.au](https://www.australia.gov.au)
+
+> Looking to add or modify site content? Follow our [Wiki guide!](https://github.com/govau/ausgov/wiki)
 
 # Contents
 
