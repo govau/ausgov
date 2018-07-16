@@ -7,6 +7,7 @@
 -   Added content for apology (audio, video, extended), security, domain names, privacy, disclaimer
 -   Added links for `our-country` and `time-zones` icon
 -   Added missing content pages
+-   Corrected new index headers e.g `Next public holiday:` outside of row
 
 ## 0.0.2
 
