@@ -1,7 +1,7 @@
 {
 	"name": "ausgov",
 	"description": "Streamlined static site replacement for australia.gov.au",
-	"version": "0.0.3",
+	"version": "0.1.4",
 	"engines": {
 		"node": ">=8.0.0",
 		"npm": ">=5.0.0"
