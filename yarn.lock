@@ -121,9 +121,9 @@
     "@gov.au/pancake-react" "~1"
     "@gov.au/pancake-sass" "~2"
 
-"@gov.au/callout@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@gov.au/callout/-/callout-2.0.5.tgz#9bdff19ce5bf2f71ddc0d71b98999d8220eb8244"
+"@gov.au/callout@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@gov.au/callout/-/callout-2.0.6.tgz#fb6cf88c3bb06e330e1b28a6f7d54ec70859374a"
   dependencies:
     "@gov.au/core" "^3.0.0"
     "@gov.au/pancake" "~1"
@@ -218,9 +218,9 @@
   dependencies:
     babel-runtime "6.26.0"
 
-"@gov.au/select@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@gov.au/select/-/select-2.0.5.tgz#31e76c1c32909cb80563e6641ce229f661dc5a15"
+"@gov.au/select@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@gov.au/select/-/select-2.0.6.tgz#3f684fed72cf79952d608af6e85ec4c6630a20b7"
   dependencies:
     "@gov.au/core" "^3.0.0"
     "@gov.au/pancake" "~1"
