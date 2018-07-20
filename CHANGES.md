@@ -1,6 +1,6 @@
 ## 0.1.4
 
--
+-   Refactored public holiday component and added to `index.js` page.
 
 ## 0.0.3
 
