@@ -3,7 +3,7 @@ import AUfooter, { AUfooterNav, AUfooterEnd } from "@gov.au/footer";
 import AUlinkList from "@gov.au/link-list";
 import Link from "gatsby-link";
 
-import "./footer.scss";
+import "./Footer.scss";
 import linkIcon from "../assets/link.svg";
 
 const Footer = () => (
