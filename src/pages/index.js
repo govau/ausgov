@@ -56,7 +56,7 @@ class Index extends React.Component {
 								title="Public Holidays"
 								bodyText="Check public holidays for your state"
 								color="green"
-								link="/holidays"
+								link="/holiday"
 							/>
 						</div>
 						<div className="col-md-4">
