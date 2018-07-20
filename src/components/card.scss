@@ -1,0 +1,52 @@
+$purple-light: #912b87;
+$purple-light-hover: #edddec;
+$purple: #5f43ac;
+$purple-hover: #e8e4f3;
+$green: #32a556;
+$green-hover: #def0e4;
+
+.card {
+	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 0.25rem;
+	padding: 1rem;
+	margin-bottom: 2rem;
+
+	.card__heading {
+		text-decoration: underline;
+	}
+
+	&:hover {
+		transition: 0.5s;
+		box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+
+		.card__heading {
+			text-decoration: none;
+		}
+	}
+
+	&.card--purple-light {
+		border-top: solid 5px $purple-light;
+		&:hover {
+			background: $purple-light-hover;
+		}
+	}
+
+	&.card--purple {
+		border-top: solid 5px $purple;
+		&:hover {
+			background: $purple-hover;
+		}
+	}
+
+	&.card--green {
+		border-top: solid 5px $green;
+		&:hover {
+			background: $green-hover;
+		}
+	}
+}
+
+.card-link {
+	text-decoration: none !important;
+}
