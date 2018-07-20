@@ -4,6 +4,11 @@
 	padding-left: 16px !important;
 	background-color: #212121 !important;
 	border-bottom: 0.25rem solid $text-underline;
+
+	.header-logo > img {
+		width: 256px;
+		height: 48px;
+	}
 }
 
 .au-header__text {
@@ -16,7 +21,6 @@
 
 .au-header__brand-image {
 	filter: invert(100%);
-	// width: 10rem;
 }
 
 .au-header__text,
@@ -43,7 +47,7 @@
 	padding-right: 5px;
 	font-size: 0.75rem;
 	font-weight: normal;
-	border: solid 2px #fff;
+	border: solid 1px #fff;
 	border-radius: 2em;
-	vertical-align: text-bottom;
+	vertical-align: text-top;
 }
