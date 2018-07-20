@@ -9,17 +9,17 @@ class CampaignTile extends React.Component {
 
 	render() {
 		return (
-			<div className="feature-tile">
-				<div className="feature-tile-image">
-					<a href={this.props.href}>
+			<a href={this.props.href}>
+				<div className="feature-tile">
+					<div className="feature-tile-image">
 						<img src={this.props.imgSrc} alt="" />
 						<div className="feature-tile-content">
 							<h3>{this.props.title}</h3>
 							<p>{this.props.desc}</p>
 						</div>
-					</a>
+					</div>
 				</div>
-			</div>
+			</a>
 		);
 	}
 }
