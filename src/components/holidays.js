@@ -1,4 +1,4 @@
-export const holidays = [
+export const Holidays = [
 	{
 		_id: 33,
 		Date: "2018-01-01",

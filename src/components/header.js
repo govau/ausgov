@@ -4,7 +4,7 @@ import AUheader, { AUheaderBrand } from "@gov.au/header";
 import crest from "../assets/crest.svg";
 import logo from "../assets/logo.svg";
 
-import "./header.scss";
+import "./Header.scss";
 
 const version = require("../../package.json").version;
 
