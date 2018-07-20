@@ -1,21 +1,9 @@
 import React from "react";
-import Link from "gatsby-link";
-
-import schoolIcon from "../assets/school.svg";
-import telephoneCodesIcon from "../assets/telephone_codes.svg";
-import timezoneIcon from "../assets/timezone.svg";
-import publicHolidayIcon from "../assets/public_holiday.svg";
-import nationalSymbolIcon from "../assets/national_symbol.svg";
-import countryIcon from "../assets/australia.svg";
-import Card from "../components/card";
+import Card from "../components/Card";
 
 import "./index.scss";
 
 class Index extends React.Component {
-	constructor() {
-		super();
-	}
-
 	render() {
 		return (
 			<div className="index">
