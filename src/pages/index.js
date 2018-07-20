@@ -1,5 +1,7 @@
 import React from "react";
+
 import Card from "../components/Card";
+import Campaign from "../components/Campaign";
 
 import "./index.scss";
 
@@ -65,6 +67,12 @@ class Index extends React.Component {
 						</div>
 					</div>
 				</div>
+				<hr />
+				<h1>Next public holiday:</h1>
+				<br />
+				<hr />
+				<h1>What's the Government promoting?</h1>
+				<Campaign />
 			</div>
 		);
 	}

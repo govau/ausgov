@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { holidays } from "../components/holidays.js";
+import { holidays } from "../components/Holidays";
 import { AUcalloutCalendar } from "@gov.au/callout";
 
 class Holiday extends Component {

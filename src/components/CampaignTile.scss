@@ -1,0 +1,29 @@
+.feature-tile {
+	background-color: #f7f7f7;
+	border-bottom: 3px solid #f0f3f5;
+	height: 348px;
+	width: 268px;
+	float: left;
+	margin: 0.5rem;
+	margin-left: 0;
+
+	.feature-tile-image > a {
+		text-decoration: none;
+	}
+
+	.feature-tile-image > a > h3 {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		text-decoration: none;
+	}
+
+	.feature-tile-content {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	img {
+		height: 160px;
+		width: 268px;
+	}
+}
