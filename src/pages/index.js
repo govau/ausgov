@@ -8,6 +8,8 @@ import publicHolidayIcon from "../assets/public_holiday.svg";
 import nationalSymbolIcon from "../assets/national_symbol.svg";
 import countryIcon from "../assets/australia.svg";
 
+import PublicHolidays from "../components/PublicHoliday";
+
 import "./index.scss";
 
 class Index extends React.Component {
@@ -26,7 +28,7 @@ class Index extends React.Component {
 						School Timetables
 					</div>
 					<div className="col-xs-4">
-						<Link to="/holidays">
+						<Link to="/holiday">
 							<img
 								className="icon"
 								src={publicHolidayIcon}
@@ -79,6 +81,17 @@ class Index extends React.Component {
 				<br />
 				<hr />
 				<h1>Next public holiday:</h1>
+				<div className="row">
+					<div className="col-sm-8">
+						Our National Public Holidays are New Year's Day,
+						Australia Day, Good Friday, Easter Monday, Anzac Day,
+						Christmas Day and Boxing Day. <br />
+						<br /> All other public holidays such as Queen's
+						Birthday and Labour Day are individually declared by the
+						state and territory governments.
+					</div>
+					<PublicHolidays showAll={false} />
+				</div>
 				<br />
 				<hr />
 				<h1>What's the Government promoting?</h1>
