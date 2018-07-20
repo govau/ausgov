@@ -64,7 +64,7 @@ class PublicHoliday extends Component {
 										month: "long",
 									}
 								)}
-								subline=""
+								subline={item.state}
 								name={item.title}
 							/>
 						</div>
