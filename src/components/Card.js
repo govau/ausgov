@@ -1,6 +1,7 @@
 import React from "react";
-import "./Card.scss";
 import Link from "gatsby-link";
+
+import "./Card.scss";
 
 function Card(props) {
 	return (
