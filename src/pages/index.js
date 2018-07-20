@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import Campaign from "../components/Campaign";
 
 import schoolIcon from "../assets/school.svg";
 import telephoneCodesIcon from "../assets/telephone_codes.svg";
@@ -82,6 +83,7 @@ class Index extends React.Component {
 				<br />
 				<hr />
 				<h1>What's the Government promoting?</h1>
+				<Campaign />
 			</div>
 		);
 	}
