@@ -7,81 +7,76 @@ import timezoneIcon from "../assets/timezone.svg";
 import publicHolidayIcon from "../assets/public_holiday.svg";
 import nationalSymbolIcon from "../assets/national_symbol.svg";
 import countryIcon from "../assets/australia.svg";
+import Card from "../components/card";
 
 import "./index.scss";
 
 class Index extends React.Component {
+	constructor() {
+		super();
+	}
+
 	render() {
 		return (
 			<div className="index">
-				<div className="row">
-					<div className="col-xs-4">
-						<Link to="/school-term-dates">
-							<img
-								className="icon"
-								src={schoolIcon}
-								alt="school icon"
+				<div className="container ">
+					<h2>About Australia</h2>
+
+					<div className="row card-row">
+						<div className="col-md-4">
+							<Card
+								title="Our Country"
+								bodyText="Find out more about Australia"
+								color="purple-light"
+								link="/about-australia"
 							/>
-						</Link>
-						School Timetables
+						</div>
+						<div className="col-md-4">
+							<Card
+								title="National Symbols"
+								bodyText="See National Symbols"
+								color="green"
+								link="/national-symbols"
+							/>
+						</div>
+						<div className="col-md-4">
+							<Card
+								title="Telephone Codes"
+								bodyText="Check Australian Phone codes"
+								color="purple"
+								link="/telephone-country-and-area-codes"
+							/>
+						</div>
 					</div>
-					<div className="col-xs-4">
-						<Link to="/holidays">
-							<img
-								className="icon"
-								src={publicHolidayIcon}
-								alt="public holidays"
+
+					<h2>Holidays and events</h2>
+					<div className="row card-row">
+						<div className="col-md-4">
+							<Card
+								title="School Holidays"
+								bodyText="Check to see upcoming school holidays"
+								color="purple-light"
+								link="/school-term-dates"
 							/>
-						</Link>
-						Public Holidays
-					</div>
-					<div className="col-xs-4">
-						<Link to="/telephone-country-and-area-codes">
-							<img
-								className="icon"
-								src={telephoneCodesIcon}
-								alt="telephone codes"
+						</div>
+						<div className="col-md-4">
+							<Card
+								title="Public Holidays"
+								bodyText="Check public holidays for your state"
+								color="green"
+								link="/holidays"
 							/>
-						</Link>
-						Telephone Codes
-					</div>
-					<div className="col-xs-4">
-						<Link to="">
-							<img
-								className="icon"
-								src={timezoneIcon}
-								alt="australian time zones"
+						</div>
+						<div className="col-md-4">
+							<Card
+								title="Timezones"
+								bodyText="Check timezones in Australia"
+								color="purple"
+								link="/time-zones-and-daylight-saving"
 							/>
-						</Link>
-						Australian Time Zones
-					</div>
-					<div className="col-xs-4">
-						<Link to="">
-							<img
-								className="icon"
-								src={nationalSymbolIcon}
-								alt="national symbols"
-							/>
-						</Link>
-						National Symbols
-					</div>
-					<div className="col-xs-4">
-						<Link to="">
-							<img
-								className="icon"
-								src={countryIcon}
-								alt="our country"
-							/>
-						</Link>
-						Our Country
+						</div>
 					</div>
 				</div>
-				<br />
-				<hr />
-				<h1>Next public holiday:</h1>
-				<br />
-				<hr />
-				<h1>What's the Government promoting?</h1>
 			</div>
 		);
 	}

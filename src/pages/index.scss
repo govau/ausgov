@@ -1,25 +1,5 @@
 @import "../variables.scss";
 
-.index {
-	.col-xs-4 {
-		display: grid;
-		text-align: center;
-
-		a {
-			text-decoration: none;
-		}
-		a:hover {
-			background-color: $AU-colordark-foreground-action;
-			transition: 0.25s;
-		}
-
-		.icon {
-			width: 96px;
-			height: 96px;
-		}
-	}
-}
-
 .domain-name-table {
 	table {
 		border-collapse: collapse;
@@ -40,4 +20,8 @@
 		background-color: #00c4ec;
 		color: white;
 	}
+}
+
+.card-row {
+	padding-bottom: 3rem;
 }
