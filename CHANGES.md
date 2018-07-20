@@ -4,6 +4,7 @@
 -   Moved header alpha badge to site title, added australia.gov.au branding.
 -   Added campaign tiles to `index.js`
 -   Renamed components to follow uppercase naming conventions
+-   Refactored public holiday component and added to `index.js` page.
 
 ## 0.0.3
 

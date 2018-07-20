@@ -3,6 +3,8 @@ import React from "react";
 import Card from "../components/Card";
 import Campaign from "../components/Campaign";
 
+import PublicHolidays from "../components/PublicHoliday";
+
 import "./index.scss";
 
 class Index extends React.Component {
@@ -69,6 +71,17 @@ class Index extends React.Component {
 				</div>
 				<hr />
 				<h1>Next public holiday:</h1>
+				<div className="row">
+					<div className="col-sm-8">
+						Our National Public Holidays are New Year's Day,
+						Australia Day, Good Friday, Easter Monday, Anzac Day,
+						Christmas Day and Boxing Day. <br />
+						<br /> All other public holidays such as Queen's
+						Birthday and Labour Day are individually declared by the
+						state and territory governments.
+					</div>
+					<PublicHolidays showAll={false} />
+				</div>
 				<br />
 				<hr />
 				<h1>What's the Government promoting?</h1>
