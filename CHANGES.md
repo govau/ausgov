@@ -1,6 +1,6 @@
 ## 0.1.4
 
--
+-   Added cards to home page to repalce icons
 
 ## 0.0.3
 
