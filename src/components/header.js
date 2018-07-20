@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import AUheader, { AUheaderBrand } from "@gov.au/header";
 import crest from "../assets/crest.svg";
+import logo from "../assets/logo.svg";
 
 import "./header.scss";
 
@@ -14,16 +15,20 @@ const Header = ({ siteTitle }) => (
 			<AUheaderBrand
 				link="/"
 				linkComponent={Link}
-				title={siteTitle}
+				title={
+					<div className="header-logo">
+						<img src={logo} alt="australia.gov.au logo" />{" "}
+						<span className="alpha-badge">
+							alpha{` ${version}`}
+						</span>
+					</div>
+				}
 				brandImage={crest}
 				brandImageAlt="australia.gov.au"
 				subline={
 					<div>
 						Helping you find Australian government information and
 						services{" "}
-						<span className="alpha-badge">
-							alpha{` ${version}`}
-						</span>
 					</div>
 				}
 			/>
