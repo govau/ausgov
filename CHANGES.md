@@ -1,6 +1,7 @@
 ## 0.1.4
 
--
+-   Added campaign tiles to `index.js`
+-   Renamed components to follow uppercase naming conventions
 
 ## 0.0.3
 
