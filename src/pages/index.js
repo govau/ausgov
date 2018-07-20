@@ -2,7 +2,6 @@ import React from "react";
 
 import Campaign from "../components/Campaign";
 import Card from "../components/Card";
-import Campaign from "../components/Campaign";
 
 import PublicHolidays from "../components/PublicHoliday";
 
