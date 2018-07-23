@@ -1,28 +1,33 @@
 @import "../_variables.scss";
 
-.au-header {
-	padding-left: 16px !important;
-	background-color: #212121 !important;
-	border-bottom: 0.25rem solid $text-underline;
+div > .au-header {
+	background-color: #212121;
 }
 
-.au-header__text {
-	text-decoration: none !important;
+.au-header {
+	padding-left: 1rem;
+	border-bottom: 0.25rem solid $text-underline;
+
+	.header-logo img {
+		width: 14rem;
+	}
 }
 
 .au-header__brand {
 	border-bottom: none;
+
+	.au-header__text {
+		h1,
+		div {
+			text-decoration: none;
+			color: white;
+		}
+	}
 }
 
 .au-header__brand-image {
 	filter: invert(100%);
-}
-
-.au-header__text,
-.au-header__heading,
-.au-header__subline {
-	color: white !important;
-	font-weight: normal !important;
+	width: 14rem;
 }
 
 .official-banner {
@@ -44,5 +49,5 @@
 	font-weight: normal;
 	border: solid 1px #fff;
 	border-radius: 2em;
-	vertical-align: text-top;
+	vertical-align: super;
 }
