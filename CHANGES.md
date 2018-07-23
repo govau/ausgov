@@ -7,6 +7,7 @@
 -   Added campaign tiles to `index.js`
 -   Renamed components to follow uppercase naming conventions
 -   Refactored public holiday component and added to `index.js` page.
+-   Centered `What's government promoting` and `next public holiday.` and changed the heading sizes.
 
 ## 0.0.3
 

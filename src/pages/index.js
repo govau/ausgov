@@ -10,7 +10,7 @@ import "./index.scss";
 class Index extends React.Component {
 	render() {
 		return (
-			<div className="index">
+			<div className="index au-body">
 				<div className="container ">
 					<h2>About Australia</h2>
 
@@ -70,22 +70,26 @@ class Index extends React.Component {
 					</div>
 				</div>
 				<hr />
-				<h1>Next public holiday:</h1>
-				<div className="row">
-					<div className="col-sm-8">
-						Our National Public Holidays are New Year's Day,
-						Australia Day, Good Friday, Easter Monday, Anzac Day,
-						Christmas Day and Boxing Day. <br />
-						<br /> All other public holidays such as Queen's
-						Birthday and Labour Day are individually declared by the
-						state and territory governments.
+				<div className="container">
+					<h2>Next public holiday:</h2>
+					<div className="row">
+						<div className="col-sm-8">
+							Our National Public Holidays are New Year's Day,
+							Australia Day, Good Friday, Easter Monday, Anzac
+							Day, Christmas Day and Boxing Day. <br />
+							<br /> All other public holidays such as Queen's
+							Birthday and Labour Day are individually declared by
+							the state and territory governments.
+						</div>
+						<PublicHolidays showAll={false} />
 					</div>
-					<PublicHolidays showAll={false} />
 				</div>
 				<br />
 				<hr />
-				<h1>What's the Government promoting?</h1>
-				<Campaign />
+				<div className="container">
+					<h2>What's the Government promoting?</h2>
+					<Campaign />
+				</div>
 			</div>
 		);
 	}
