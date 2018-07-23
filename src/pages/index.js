@@ -10,8 +10,8 @@ import "./index.scss";
 class Index extends React.Component {
 	render() {
 		return (
-			<div className="index au-body">
-				<div className="container ">
+			<div className="index">
+				<div className="container">
 					<h2>About Australia</h2>
 
 					<div className="row card-row">
@@ -68,9 +68,7 @@ class Index extends React.Component {
 							/>
 						</div>
 					</div>
-				</div>
-				<hr />
-				<div className="container">
+					<hr />
 					<h2>Next public holiday:</h2>
 					<div className="row">
 						<div className="col-sm-8">
@@ -83,10 +81,8 @@ class Index extends React.Component {
 						</div>
 						<PublicHolidays showAll={false} />
 					</div>
-				</div>
-				<br />
-				<hr />
-				<div className="container">
+					<br />
+					<hr />
 					<h2>What's the Government promoting?</h2>
 					<Campaign />
 				</div>
