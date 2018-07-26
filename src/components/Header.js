@@ -9,7 +9,7 @@ import "./Header.scss";
 const version = require("../../package.json").version;
 
 const Header = ({ siteTitle }) => (
-	<div>
+	<div className="header">
 		<OfficalBanner />
 		<AUheader>
 			<AUheaderBrand

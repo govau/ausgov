@@ -1,53 +1,56 @@
 @import "../_variables.scss";
 
-div > .au-header {
-	background-color: #212121;
-}
-
-.au-header {
-	padding-left: 1rem;
-	border-bottom: 0.25rem solid $text-underline;
-
-	.header-logo img {
-		width: 14rem;
-	}
-}
-
-.au-header__brand {
-	border-bottom: none;
-
-	.au-header__text {
-		h1,
-		div {
-			text-decoration: none;
-			color: white;
-		}
-	}
-}
-
-.au-header__brand-image {
-	filter: invert(100%);
-	width: 14rem;
-}
-
-.official-banner {
-	border-bottom: solid 0.25rem $banner-border-bottom;
-	padding: 0.5rem;
-	text-align: center;
-	font-family: $AU-font;
-
+.header {
 	a {
 		text-decoration: none;
-		color: black;
+		color: white;
 	}
-}
 
-.alpha-badge {
-	padding-left: 5px;
-	padding-right: 5px;
-	font-size: 0.75rem;
-	font-weight: normal;
-	border: solid 1px #fff;
-	border-radius: 2em;
-	vertical-align: super;
+	.au-header {
+		background-color: #212121;
+		padding-left: 1rem;
+		border-bottom: 0.25rem solid $text-underline;
+
+		.header-logo img {
+			width: 14rem;
+		}
+
+		.au-header__brand {
+			border-bottom: none;
+
+			.au-header__brand-image {
+				filter: invert(100%);
+				width: 14rem;
+			}
+
+			.au-header__text,
+			div {
+				text-decoration: none;
+				color: white;
+			}
+		}
+	}
+
+	.official-banner {
+		border-bottom: solid 0.25rem $banner-border-bottom;
+		padding: 0.5rem;
+		text-align: center;
+		font-family: $AU-font;
+		color: black;
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+
+	.alpha-badge {
+		padding-left: 5px;
+		padding-right: 5px;
+		font-size: 0.75rem;
+		font-weight: normal;
+		border: solid 1px #fff;
+		border-radius: 2em;
+		vertical-align: super;
+	}
 }
