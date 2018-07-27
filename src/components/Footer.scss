@@ -10,16 +10,19 @@
 	margin-left: 16px;
 	margin-right: 16px;
 	width: 60%;
-	font-weight: lighter !important;
+	font-weight: lighter;
 }
 
-.au-link-list {
-	padding: 0;
-	margin-left: 16px;
-	margin-right: 16px;
-	display: inline-flex !important;
-	li {
-		padding-right: 16px;
+.au-footer__navigation {
+	.au-link-list {
+		padding: 0;
+		margin-left: 16px;
+		margin-right: 16px;
+		display: inline-flex;
+
+		li {
+			padding-right: 16px;
+		}
 	}
 }
 
