@@ -9,14 +9,9 @@ class PublicHoliday extends Component {
 		this.state = {
 			holidays,
 			states: ["NATIONAL", "NT", "NSW", "VIC", "TAS", "SA", "ACT", "WA"],
-			nextHoliday: [],
+			nextHoliday: this.getNextDate(holidays, new Date(), true),
 			stateSelected: "NATIONAL",
 		};
-	}
-
-	componentWillMount() {
-		let nextHoliday = this.getNextDate(holidays, new Date(), true);
-		this.setState({ nextHoliday });
 	}
 
 	/**
@@ -34,6 +29,7 @@ class PublicHoliday extends Component {
 		let filteredHolidays = isNational
 			? holidays.filter(record => record.state === "NATIONAL")
 			: holidays;
+
 		filteredHolidays.forEach(record => {
 			if (
 				new Date(record.date) > now &&
@@ -43,9 +39,8 @@ class PublicHoliday extends Component {
 				nextHolidayId = record._id;
 			}
 		});
-		return this.state.holidays.filter(
-			holiday => holiday._id === nextHolidayId
-		);
+
+		return holidays.filter(holiday => holiday._id === nextHolidayId);
 	};
 
 	render() {
