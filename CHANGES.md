@@ -8,6 +8,8 @@
 -   Renamed components to follow uppercase naming conventions
 -   Refactored public holiday component and added to `index.js` page.
 -   Centered `What's government promoting` and `next public holiday.` and changed the heading sizes.
+-   Removed top margin padding for `Card` components
+-   Fixed card styling overrides
 
 ## 0.0.3
 
