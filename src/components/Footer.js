@@ -34,12 +34,12 @@ const Footer = () => (
 				is licensed under the{" "}
 				<a href="https://raw.githubusercontent.com/adamzerella/ausgov/master/LICENSE">
 					MIT license
-					<img
-						className="licenseLink"
-						alt="MIT license link"
-						src={linkIcon}
-					/>
-				</a>{" "}
+				</a>
+				<img
+					className="licenseLink"
+					alt="MIT license link"
+					src={linkIcon}
+				/>
 			</AUfooterEnd>
 		</AUfooter>
 	</div>
