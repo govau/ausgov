@@ -10,6 +10,7 @@
 -   Centered `What's government promoting` and `next public holiday.` and changed the heading sizes.
 -   Removed top margin padding for `Card` components
 -   Fixed card styling overrides
+-   Refactored `React 16` deprecations
 
 ## 0.0.3
 
