@@ -1,38 +1,35 @@
 @import "../_variables.scss";
 
-.au-footer {
-	margin: 0;
-	bottom: 0;
-	border-top: none;
-}
+.footer {
+	.au-footer {
+		&.au-footer--dark {
+			background-color: #313131;
+			padding-left: 3.5rem;
+			bottom: 0;
+			border-top: none;
 
-.au-footer__end {
-	margin-left: 16px;
-	margin-right: 16px;
-	width: 60%;
-	font-weight: lighter;
-}
+			.au-footer__end {
+				width: 60%;
+				font-weight: lighter;
+			}
 
-.au-footer__navigation {
-	.au-link-list {
-		padding: 0;
-		margin-left: 16px;
-		margin-right: 16px;
-		display: inline-flex;
+			.au-footer__navigation {
+				.au-link-list {
+					padding: 0;
+					display: inline-flex;
 
-		li {
-			padding-right: 16px;
+					li {
+						padding-right: 16px;
+					}
+				}
+			}
+
+			.licenseLink {
+				width: 16px;
+				height: 16px;
+				margin-left: 0.2rem;
+				vertical-align: middle;
+			}
 		}
 	}
-}
-
-.licenseLink {
-	width: 16px;
-	height: 16px;
-	margin-left: 5px;
-	vertical-align: middle;
-}
-
-.feedback-block {
-	float: right;
 }

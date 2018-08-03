@@ -11,6 +11,7 @@
 -   Removed top margin padding for `Card` components
 -   Fixed card styling overrides
 -   Refactored `React 16` deprecations
+-   Centered footer content and changed background colour to darker shade.
 
 ## 0.0.3
 
