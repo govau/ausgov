@@ -36,6 +36,10 @@ jobs:
       - attach_workspace:
           at: ~/project # /home/root/project
       - run:
+          name: Copy NGINX conf into public dir (which is what CF pushes)
+          command: |
+            cp deploy/nginx.conf public/nginx.conf
+      - run:
           name: Deploying to cloud.gov.au
           command: |
             cf login -a api.system.y.cld.gov.au -o dta -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
