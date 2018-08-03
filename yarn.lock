@@ -218,6 +218,15 @@
   dependencies:
     babel-runtime "6.26.0"
 
+"@gov.au/responsive-media@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@gov.au/responsive-media/-/responsive-media-2.0.9.tgz#f90f916e26d050e96d2083b7cbfc2118f0bb6a96"
+  dependencies:
+    "@gov.au/core" "^3.0.0"
+    "@gov.au/pancake" "~1"
+    "@gov.au/pancake-json" "~1"
+    "@gov.au/pancake-sass" "~2"
+
 "@gov.au/select@^2.0.6":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@gov.au/select/-/select-2.0.6.tgz#3f684fed72cf79952d608af6e85ec4c6630a20b7"

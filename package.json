@@ -18,6 +18,7 @@
 		"@gov.au/header": "^4.1.1",
 		"@gov.au/link-list": "^2.1.1",
 		"@gov.au/pancake": "^1.2.3",
+		"@gov.au/responsive-media": "^2.0.9",
 		"@gov.au/select": "^2.0.6",
 		"gatsby": "^1.9.247",
 		"gatsby-link": "^1.6.40",
