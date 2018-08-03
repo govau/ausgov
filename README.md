@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/govau/ausgov.svg?style=svg)](https://circleci.com/gh/govau/ausgov)
 [![GitHub license](https://img.shields.io/github/license/govau/ausgov.svg)](https://github.com/govau/ausgov/blob/master/LICENSE)
 
-Streamlined static site replacement for [australia.gov.au](https://www.australia.gov.au)
+Streamlined static site POC for [australia.gov.au](https://www.australia.gov.au)
 
 > Looking to add or modify site content? Follow our [Wiki guide!](https://github.com/govau/ausgov/wiki)
 
