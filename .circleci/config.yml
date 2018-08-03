@@ -36,10 +36,10 @@ jobs:
             - attach_workspace:
                   at: ~/project # /home/root/project
             - run:
-                  name:
-                      Copy NGINX conf into public dir (which is what CF pushes)
+                  name: Copy nginx conf files into public
                   command: |
-                      cp deploy/nginx.conf public/nginx.conf
+                      cp -r deploy/nginx public/nginx
+                      cp -r deploy/Staticfile public/Staticfile
             - run:
                   name: Deploying to cloud.gov.au
                   command: |
