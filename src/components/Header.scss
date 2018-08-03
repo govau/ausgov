@@ -1,15 +1,16 @@
 @import "../_variables.scss";
 
 .header {
-	a {
-		text-decoration: none;
-		color: white;
-	}
-
 	.au-header {
 		background-color: #212121;
-		padding-left: 1rem;
 		border-bottom: 0.25rem solid $text-underline;
+
+		//Work in progress, will need to implement grid system.
+		@media (min-width: 768px) {
+			padding-left: 3.5rem;
+		}
+
+		padding-left: 1.5rem;
 
 		.header-logo img {
 			width: 14rem;
@@ -20,13 +21,16 @@
 
 			.au-header__brand-image {
 				filter: invert(100%);
-				width: 14rem;
+				width: 12rem;
 			}
 
-			.au-header__text,
-			div {
-				text-decoration: none;
-				color: white;
+			.au-header__text {
+				width: 100%;
+				&,
+				div {
+					color: white;
+					text-decoration: none;
+				}
 			}
 		}
 	}

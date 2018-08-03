@@ -11,6 +11,7 @@
 -   Removed top margin padding for `Card` components
 -   Fixed card styling overrides
 -   Refactored `React 16` deprecations
+-   Centered header content
 
 ## 0.0.3
 
