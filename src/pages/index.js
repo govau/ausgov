@@ -11,7 +11,7 @@ class Index extends React.Component {
 	render() {
 		return (
 			<div className="index">
-				<div className="container">
+				<div className="container-fluid">
 					<h2>About Australia</h2>
 
 					<div className="row card-row">

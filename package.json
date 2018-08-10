@@ -1,13 +1,16 @@
 {
 	"name": "ausgov",
-	"description": "Streamlined static site replacement for australia.gov.au",
+	"description": "Streamlined static site POC for australia.gov.au",
 	"version": "0.1.4",
-	"engines": {
-		"node": ">=8.0.0",
-		"npm": ">=5.0.0"
+	"scripts": {
+		"purge": "rm -rf ./node_modules",
+		"build": "gatsby build",
+		"dev": "gatsby develop",
+		"format": "prettier --write 'src/**/*.js'",
+		"precommit": "pretty-quick --staged"
 	},
-	"author": "Adam Zerella <adam.zerella@gmail.com>",
 	"dependencies": {
+		"@gov.au/animate": "^1.0.6",
 		"@gov.au/accordion": "^3.0.5",
 		"@gov.au/body": "^2.0.7",
 		"@gov.au/buttons": "^3.0.1",
@@ -31,19 +34,6 @@
 		"gatsby-transformer-remark": "^1.7.44",
 		"react-helmet": "^5.2.0"
 	},
-	"keywords": [
-		"australia",
-		"australia.gov.au",
-		"ausgov"
-	],
-	"license": "MIT",
-	"scripts": {
-		"purge": "rm -rf ./node_modules",
-		"build": "gatsby build",
-		"dev": "gatsby develop",
-		"format": "prettier --write 'src/**/*.js'",
-		"precommit": "pretty-quick --staged"
-	},
 	"devDependencies": {
 		"babel-eslint": "^8.2.4",
 		"eslint": "^5.0.0",
@@ -57,26 +47,49 @@
 		"prettier": "^1.12.0",
 		"pretty-quick": "^1.6.0"
 	},
+	"engines": {
+		"node": ">=8.0.0",
+		"npm": ">=5.0.0"
+	},
+	"author": {
+		"name": "Commonwealth of Australia, DTA",
+		"email": "guides@digital.gov.au",
+		"url": "https://www.dta.gov.au/"
+	},
+	"contributors": [
+		{
+			"name": "Adam Zerella",
+			"email": "adamzerella@users.noreply.github.com",
+			"url": "https://adamzerella.com/"
+		},
+		{
+			"name": "Sukhraj Ghuman",
+			"email": "sukhrajghuman@live.com",
+			"url": "https://github.com/sukhrajghuman"
+		},
+		{
+			"name": "Brendan Ng",
+			"email": "brendan.ng@digital.gov.au",
+			"url": "https://brendan.ng"
+		}
+	],
+	"keywords": [
+		"australia",
+		"australia.gov.au",
+		"ausgov"
+	],
+	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/adamzerella/ausgov"
+		"url": "https://github.com/govau/ausgov"
 	},
 	"pancake": {
 		"auto-save": true,
 		"plugins": true,
-		"ignore": [],
-		"json": {
-			"enable": false,
-			"location": "pancake/",
-			"name": "pancake",
-			"content": {
-				"name": true,
-				"version": true,
-				"dependencies": true,
-				"path": true,
-				"settings": true
-			}
-		},
+		"ignore": [
+			"@gov.au/pancake-react",
+			"@gov.au/pancake-json"
+		],
 		"css": {
 			"minified": true,
 			"modules": false,
@@ -86,22 +99,19 @@
 				"ie 9",
 				"ie 10"
 			],
-			"location": "pancake/css/",
-			"name": "pancake.min.css"
+			"location": false,
+			"name": false
 		},
 		"sass": {
 			"modules": false,
-			"location": "pancake/sass/",
-			"name": "pancake.scss"
-		},
-		"react": {
-			"location": "pancake/react/"
+			"location": "src/",
+			"name": "_uikit.scss"
 		},
 		"js": {
 			"minified": true,
 			"modules": false,
-			"location": "pancake/js/",
-			"name": "pancake.min.js"
+			"location": "src/",
+			"name": "_uikit.min.js"
 		}
 	},
 	"eslintIgnore": [
