@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Campaign from "../components/Campaign";
 
 import favicon from "../assets/favicon.ico";
 
@@ -64,7 +65,7 @@ const Layout = ({ children, data }) => (
 		/>
 		<Header siteTitle={data.site.siteMetadata.title} />
 		<div className="au-body">{children()}</div>
-		<br />
+		<Campaign />
 		<Footer />
 	</main>
 );

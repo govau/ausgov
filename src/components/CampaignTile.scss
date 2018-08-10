@@ -1,29 +1,16 @@
-.feature-tile {
-	background-color: #f7f7f7;
-	border-bottom: 3px solid #f0f3f5;
-	height: 348px;
-	width: 268px;
-	float: left;
-	margin: 0.5rem;
-	margin-left: 0;
+.campaign-tile {
+	.col-xl-2 {
+		&.col-md-3 {
+			background-color: #ffffff;
+			border-bottom: 3px solid #bcbcbc;
+			color: #313131;
+			margin: 0.25rem;
+			height: 21rem;
 
-	.feature-tile-image > a {
-		text-decoration: none;
-	}
-
-	.feature-tile-image > a > h3 {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-		text-decoration: none;
-	}
-
-	.feature-tile-content {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-
-	img {
-		height: 160px;
-		width: 268px;
+			img {
+				width: 268px;
+				height: 160px;
+			}
+		}
 	}
 }

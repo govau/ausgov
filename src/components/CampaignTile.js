@@ -9,14 +9,12 @@ class CampaignTile extends React.Component {
 
 	render() {
 		return (
-			<a href={this.props.href}>
-				<div className="feature-tile">
-					<div className="feature-tile-image">
-						<img src={this.props.imgSrc} alt="" />
-						<div className="feature-tile-content">
-							<h3>{this.props.title}</h3>
-							<p>{this.props.desc}</p>
-						</div>
+			<a className="campaign-tile" href={this.props.href}>
+				<div className="col-xl-2 col-md-3">
+					<img src={this.props.imgSrc} alt="" />
+					<div className="campaign-tile-content">
+						<h3>{this.props.title}</h3>
+						<p>{this.props.desc}</p>
 					</div>
 				</div>
 			</a>

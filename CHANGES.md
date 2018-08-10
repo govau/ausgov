@@ -16,6 +16,7 @@
 -   Centered footer content and changed background colour to darker shade.
 -   Removed hr that was between the `Holidays and events` and `Next public holiday` blocks
 -   Updated `content-page` layout to be more extensible. Embedded content inside container
+-   Implemented full-width seperator background colour for campaigns.
 
 ## 0.0.3
 
