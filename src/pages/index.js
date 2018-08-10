@@ -69,7 +69,7 @@ class Index extends React.Component {
 						</div>
 					</div>
 					<hr />
-					<h2>Next public holiday:</h2>
+					<h2>Next public holiday</h2>
 					<div className="row">
 						<div className="col-sm-8">
 							Our National Public Holidays are New Year's Day,
