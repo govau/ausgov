@@ -15,6 +15,7 @@
 -   Removed colon from public holiday text AGAR-62
 -   Centered footer content and changed background colour to darker shade.
 -   Removed hr that was between the `Holidays and events` and `Next public holiday` blocks
+-   Updated `content-page` layout to be more extensible. Embedded content inside container
 
 ## 0.0.3
 
