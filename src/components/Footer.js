@@ -8,7 +8,7 @@ import linkIcon from "../assets/link.svg";
 
 const Footer = () => (
 	<AUfooter dark>
-		<div className="container">
+		<div className="container-fluid">
 			<AUfooterNav>
 				<AUlinkList
 					items={[

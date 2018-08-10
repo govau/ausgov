@@ -14,17 +14,19 @@ html {
 	flex-direction: column;
 }
 
+.container-fluid {
+	@include AU-space(max-width, 72unit);
+}
+
 .au-body {
 	padding: 16px;
 	flex: 1;
 	p {
 		a {
 			text-decoration: none;
-			border-bottom: 1px solid $text-underline;
 		}
 		a:hover {
 			color: $AU-colordark-foreground-action;
-			transition: 0.25s;
 		}
 	}
 }
@@ -37,5 +39,4 @@ a {
 
 a:hover {
 	color: $AU-colordark-foreground-action;
-	transition: 0.25s;
 }
