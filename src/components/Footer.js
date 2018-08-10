@@ -7,8 +7,8 @@ import "./Footer.scss";
 import linkIcon from "../assets/link.svg";
 
 const Footer = () => (
-	<div className="footer">
-		<AUfooter dark>
+	<AUfooter dark>
+		<div className="container">
 			<AUfooterNav>
 				<AUlinkList
 					items={[
@@ -41,8 +41,8 @@ const Footer = () => (
 					src={linkIcon}
 				/>
 			</AUfooterEnd>
-		</AUfooter>
-	</div>
+		</div>
+	</AUfooter>
 );
 
 export default Footer;
