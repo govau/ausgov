@@ -12,6 +12,7 @@
 -   Fixed card styling overrides
 -   Refactored `React 16` deprecations
 -   Removed colon from public holiday text AGAR-62
+-   Centered footer content and changed background colour to darker shade.
 
 ## 0.0.3
 

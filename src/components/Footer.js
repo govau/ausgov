@@ -7,8 +7,8 @@ import "./Footer.scss";
 import linkIcon from "../assets/link.svg";
 
 const Footer = () => (
-	<div className="footer">
-		<AUfooter dark>
+	<AUfooter dark>
+		<div className="container">
 			<AUfooterNav>
 				<AUlinkList
 					items={[
@@ -34,15 +34,15 @@ const Footer = () => (
 				is licensed under the{" "}
 				<a href="https://raw.githubusercontent.com/adamzerella/ausgov/master/LICENSE">
 					MIT license
-					<img
-						className="licenseLink"
-						alt="MIT license link"
-						src={linkIcon}
-					/>
-				</a>{" "}
+				</a>
+				<img
+					className="licenseLink"
+					alt="MIT license link"
+					src={linkIcon}
+				/>
 			</AUfooterEnd>
-		</AUfooter>
-	</div>
+		</div>
+	</AUfooter>
 );
 
 export default Footer;
