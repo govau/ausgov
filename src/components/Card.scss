@@ -1,14 +1,6 @@
 @import "../_variables.scss";
 
 .card {
-	.au-body & {
-		text-decoration: none;
-	}
-
-	.card__heading {
-		margin: 0;
-	}
-
 	display: block;
 	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
@@ -16,8 +8,22 @@
 	padding: 1rem;
 	margin-bottom: 2rem;
 
+	.au-body & {
+		text-decoration: none;
+	}
+
+	.card__heading {
+		margin: 0;
+		color: $AU-color-foreground-action;
+	}
+
+	&:hover .card__heading {
+		color: $AU-color-foreground-text;
+	}
+
 	&.card--purple-light {
 		border-top: solid 5px $purple-light;
+		color: $purple-light;
 		&:hover {
 			background: $purple-light-hover;
 		}
@@ -25,6 +31,7 @@
 
 	&.card--purple {
 		border-top: solid 5px $purple;
+		color: $purple-light;
 		&:hover {
 			background: $purple-hover;
 		}
@@ -32,6 +39,7 @@
 
 	&.card--green {
 		border-top: solid 5px $green;
+		color: $green;
 		&:hover {
 			background: $green-hover;
 		}
