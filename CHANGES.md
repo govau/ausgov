@@ -11,7 +11,8 @@
 -   Removed top margin padding for `Card` components
 -   Fixed card styling overrides
 -   Refactored `React 16` deprecations
--   removed colon from public holiday text AGAR-62
+-   Removed colon from public holiday text AGAR-62
+-   Removed hr that was between the `Holidays and events` and `Next public holiday` blocks
 
 ## 0.0.3
 

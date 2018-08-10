@@ -68,7 +68,6 @@ class Index extends React.Component {
 							/>
 						</div>
 					</div>
-					<hr />
 					<h2>Next public holiday</h2>
 					<div className="row">
 						<div className="col-sm-8">
