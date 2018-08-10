@@ -10,15 +10,17 @@ jobs:
             - restore_cache:
                   name: Restore Yarn Package Cache
                   keys:
-                      - m2-yarn-packages-lock-{{ checksum "yarn.lock" }}
+                      - m3-yarn-packages-lock-{{ checksum "yarn.lock" }}
             - run:
                   name: Install dependencies
                   command: yarn install --cache-folder ./.cache
             - save_cache:
                   name: Save Yarn Package Cache
-                  key: m2-yarn-packages-lock-{{ checksum "yarn.lock" }}
+                  key: m3-yarn-packages-lock-{{ checksum "yarn.lock" }}
                   paths:
                       - ./node_modules
+                      - ./src/_uikit.min.js
+                      - ./src/_uikit.scss
                       - ./.cache
             - run:
                   name: Build alpha.australia.gov.au
