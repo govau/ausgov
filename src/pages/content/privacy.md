@@ -58,9 +58,11 @@ This online service is bound by the provisions of the Privacy Act 1988 (Cth) - e
 Contact us about your privacy concerns.
 
 Alternatively, you can write to us at:
-
-australia.gov.au, Service Manager
-Digital Transformation Agency
-PO Box 457
-Canberra ACT 2601
+</br></br>
+<strong>
+australia.gov.au, Service Manager</br>
+Digital Transformation Agency</br>
+PO Box 457</br>
+Canberra ACT 2601</br>
 Australia
+</strong>
