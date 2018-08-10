@@ -1,3 +1,7 @@
+## 0.2.4
+
+-
+
 ## 0.1.4
 
 -   Added campaign tiles to `index.js`
