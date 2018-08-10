@@ -1,6 +1,6 @@
 {
 	"name": "ausgov",
-	"description": "Streamlined static site replacement for australia.gov.au",
+	"description": "Streamlined static site POC for australia.gov.au",
 	"version": "0.1.4",
 	"scripts": {
 		"purge": "rm -rf ./node_modules",
@@ -59,7 +59,7 @@
 	"contributors": [
 		{
 			"name": "Adam Zerella",
-			"email": "adam.zerella@gmail.com",
+			"email": "adamzerella@users.noreply.github.com",
 			"url": "https://adamzerella.com/"
 		},
 		{
@@ -81,7 +81,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/adamzerella/ausgov"
+		"url": "https://github.com/govau/ausgov"
 	},
 	"pancake": {
 		"auto-save": true,
