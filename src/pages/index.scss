@@ -1,1 +1,7 @@
 @import "../_variables.scss";
+
+.row {
+	&.row-odd {
+		background-color: #ebebeb;
+	}
+}

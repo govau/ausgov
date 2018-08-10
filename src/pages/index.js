@@ -1,6 +1,5 @@
 import React from "react";
 
-import Campaign from "../components/Campaign";
 import Card from "../components/Card";
 
 import PublicHolidays from "../components/PublicHoliday";
@@ -81,9 +80,6 @@ class Index extends React.Component {
 						<PublicHolidays showAll={false} />
 					</div>
 					<br />
-					<hr />
-					<h2>What's the Government promoting?</h2>
-					<Campaign />
 				</div>
 			</div>
 		);
