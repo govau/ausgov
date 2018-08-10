@@ -1,15 +1,14 @@
 @import "../_variables.scss";
 
-.footer {
-	.au-footer {
+footer {
+	&.au-footer {
 		&.au-footer--dark {
 			background-color: #313131;
-			padding-left: 3.5rem;
 			bottom: 0;
+			padding: 1rem;
 			border-top: none;
 
 			.au-footer__end {
-				width: 60%;
 				font-weight: lighter;
 			}
 
