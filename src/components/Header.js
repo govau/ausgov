@@ -12,26 +12,28 @@ const Header = ({ siteTitle }) => (
 	<div className="header">
 		<OfficalBanner />
 		<AUheader>
-			<AUheaderBrand
-				link="/"
-				linkComponent={Link}
-				title={
-					<div className="header-logo">
-						<img src={logo} alt="australia.gov.au logo" />{" "}
-						<span className="alpha-badge">
-							alpha{` ${version}`}
-						</span>
-					</div>
-				}
-				brandImage={crest}
-				brandImageAlt="australia.gov.au"
-				subline={
-					<div>
-						Helping you find Australian government information and
-						services{" "}
-					</div>
-				}
-			/>
+			<div className="container">
+				<AUheaderBrand
+					link="/"
+					linkComponent={Link}
+					title={
+						<div className="header-logo">
+							<img src={logo} alt="australia.gov.au logo" />{" "}
+							<span className="alpha-badge">
+								alpha{` ${version}`}
+							</span>
+						</div>
+					}
+					brandImage={crest}
+					brandImageAlt="australia.gov.au"
+					subline={
+						<div>
+							Helping you find Australian government information
+							and services{" "}
+						</div>
+					}
+				/>
+			</div>
 		</AUheader>
 	</div>
 );

@@ -11,6 +11,7 @@
 -   Removed top margin padding for `Card` components
 -   Fixed card styling overrides
 -   Refactored `React 16` deprecations
+-   Centered header content
 -   Removed colon from public holiday text AGAR-62
 -   Centered footer content and changed background colour to darker shade.
 
