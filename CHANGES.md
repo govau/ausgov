@@ -1,3 +1,7 @@
+## 0.2.4
+
+-   Bumped homepage titles from `h2` -> `h1`
+
 ## 0.1.4
 
 -   Added campaign tiles to `index.js`
@@ -16,6 +20,7 @@
 -   Centered footer content and changed background colour to darker shade.
 -   Removed hr that was between the `Holidays and events` and `Next public holiday` blocks
 -   Fixed subline text color to match border color
+-   Updated `content-page` layout to be more extensible. Embedded content inside container
 
 ## 0.0.3
 

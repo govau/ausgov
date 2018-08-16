@@ -12,7 +12,7 @@ class Index extends React.Component {
 		return (
 			<div className="index">
 				<div className="container-fluid">
-					<h2>About Australia</h2>
+					<h1>About Australia</h1>
 
 					<div className="row card-row">
 						<div className="col-md-4">
@@ -41,7 +41,7 @@ class Index extends React.Component {
 						</div>
 					</div>
 
-					<h2>Holidays and events</h2>
+					<h1>Holidays and events</h1>
 					<div className="row card-row">
 						<div className="col-md-4">
 							<Card
@@ -82,7 +82,7 @@ class Index extends React.Component {
 					</div>
 					<br />
 					<hr />
-					<h2>What's the Government promoting?</h2>
+					<h1>What's the Government promoting?</h1>
 					<Campaign />
 				</div>
 			</div>
