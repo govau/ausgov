@@ -1,7 +1,7 @@
 {
 	"name": "ausgov",
 	"description": "Streamlined static site POC for australia.gov.au",
-	"version": "0.1.4",
+	"version": "0.2.4",
 	"scripts": {
 		"purge": "rm -rf ./node_modules",
 		"build": "gatsby build",
