@@ -11,8 +11,8 @@ class Index extends React.Component {
 	render() {
 		return (
 			<div className="index">
-				<div className="container">
-					<h2>About Australia</h2>
+				<div className="container-fluid">
+					<h1>About Australia</h1>
 
 					<div className="row card-row">
 						<div className="col-md-4">
@@ -41,7 +41,7 @@ class Index extends React.Component {
 						</div>
 					</div>
 
-					<h2>Holidays and events</h2>
+					<h1>Holidays and events</h1>
 					<div className="row card-row">
 						<div className="col-md-4">
 							<Card
@@ -68,8 +68,7 @@ class Index extends React.Component {
 							/>
 						</div>
 					</div>
-					<hr />
-					<h2>Next public holiday:</h2>
+					<h2>Next public holiday</h2>
 					<div className="row">
 						<div className="col-sm-8">
 							Our National Public Holidays are New Year's Day,
@@ -83,7 +82,7 @@ class Index extends React.Component {
 					</div>
 					<br />
 					<hr />
-					<h2>What's the Government promoting?</h2>
+					<h1>What's the Government promoting?</h1>
 					<Campaign />
 				</div>
 			</div>

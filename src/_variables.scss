@@ -1,5 +1,3 @@
-@import "../../pancake/sass/pancake.scss";
-
 // Light palette
 // ==============
 $AU-color-foreground-action: #00698f !default;
@@ -26,3 +24,5 @@ $green: #32a556;
 $green-hover: #def0e4;
 $blue: #00c3ef;
 $blue-hover: #00c3ef27;
+
+@import "_uikit.scss";
