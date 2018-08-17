@@ -63,7 +63,7 @@ const Layout = ({ children, data }) => (
 			]}
 		/>
 		<Header siteTitle={data.site.siteMetadata.title} />
-		<div>{children()}</div>
+		<div className="root">{children()}</div>
 		<Footer />
 	</main>
 );
