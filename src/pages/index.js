@@ -11,7 +11,7 @@ class Index extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className=" container au-body">
+				<div className="container au-body">
 					<h1>About Australia</h1>
 					<div className="row row-aligned">
 						<div className="col-md-4">
