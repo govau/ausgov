@@ -1,54 +1,55 @@
 version: 2
 jobs:
-  build-ausgov:
-    docker:
-      - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
-    environment:
-      NODE_ENV: "production" # Won't install anything from devDependencies.
-    steps:
-      - checkout
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - m1-yarn-packages-lock-{{ checksum "yarn.lock" }}
-      - run: 
-          name: Install dependencies
-          command: yarn install --cache-folder ./.cache
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: m1-yarn-packages-lock-{{ checksum "yarn.lock" }}
-          paths:
-            - ./node_modules
-            - ./pancake
-            - ./.cache
-      - run: 
-          name: Build alpha.australia.gov.au
-          command: yarn run build
-      - persist_to_workspace:
-          root: ~/project # /home/circleci/project
-          paths:
-            - ./deploy
-            - ./public
-  deploy-stag:
-    docker:
-      - image: govau/cf-cli
-    steps:
-      - attach_workspace:
-          at: ~/project # /home/root/project
-      - run:
-          name: Deploying to cloud.gov.au
-          command: |
-            cf login -a api.system.y.cld.gov.au -o dta -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
-            cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
+    build-ausgov:
+        docker:
+            - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
+        environment:
+            NODE_ENV: "production" # Won't install anything from devDependencies.
+        steps:
+            - checkout
+            - restore_cache:
+                  name: Restore Yarn Package Cache
+                  keys:
+                      - m3-yarn-packages-lock-{{ checksum "yarn.lock" }}
+            - run:
+                  name: Install dependencies
+                  command: yarn install --cache-folder ./.cache
+            - save_cache:
+                  name: Save Yarn Package Cache
+                  key: m3-yarn-packages-lock-{{ checksum "yarn.lock" }}
+                  paths:
+                      - ./node_modules
+                      - ./src/_uikit.min.js
+                      - ./src/_uikit.scss
+                      - ./.cache
+            - run:
+                  name: Build alpha.australia.gov.au
+                  command: yarn run build
+            - persist_to_workspace:
+                  root: ~/project # /home/circleci/project
+                  paths:
+                      - ./deploy
+                      - ./public
+    deploy-stag:
+        docker:
+            - image: govau/cf-cli
+        steps:
+            - attach_workspace:
+                  at: ~/project # /home/root/project
+            - run:
+                  name: Deploying to cloud.gov.au
+                  command: |
+                      cf login -a api.system.y.cld.gov.au -o dta -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
+                      cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
 workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-      - build-ausgov:
-          filters:
-            branches:
-              only:
-                - develop
-      - deploy-stag:
-          requires:
-            - build-ausgov
+    version: 2
+    build-and-deploy:
+        jobs:
+            - build-ausgov:
+                  filters:
+                      branches:
+                          only:
+                              - develop
+            - deploy-stag:
+                  requires:
+                      - build-ausgov

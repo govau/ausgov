@@ -7,44 +7,60 @@
 	}
 }
 
-a.card {
-	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
-	transition: 0.3s;
-	border-radius: 0.25rem;
-	@include AU-space(padding, 0unit 1unit 1unit 1unit);
-	@include AU-space(margin-bottom, 2unit);
+.card {
 	display: block;
-	border-bottom: none;
+	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0.25rem;
+	padding: 1rem;
+	margin-bottom: 2rem;
+
 	.au-body & {
 		text-decoration: none;
 	}
 
-	&:hover {
-		transition: 0.5s;
-		box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+	.card__heading {
+		margin: 0;
+		color: $AU-color-foreground-action;
+	}
 
-		.card__text {
-			text-decoration: none;
-		}
+	&:hover .card__heading {
+		color: $AU-color-foreground-text;
 	}
 
 	&.card--purple-light {
-		@include card-style-generator($purple-light, $purple-light-hover);
+    @include card-style-generator($purple-light, $purple-light-hover);
+    
+		border-top: solid 5px $purple-light;
+		color: $purple-light;
+		&:hover {
+			background: $purple-light-hover;
+		}
 	}
 
 	&.card--purple {
-		@include card-style-generator($purple, $purple-hover);
+    @include card-style-generator($purple, $purple-hover);
+    
+		border-top: solid 5px $purple;
+		color: $purple-light;
+		&:hover {
+			background: $purple-hover;
+		}
 	}
 
 	&.card--green {
-		@include card-style-generator($green, $green-hover);
+    @include card-style-generator($green, $green-hover);
+    
+		border-top: solid 5px $green;
+		color: $green;
+		&:hover {
+			background: $green-hover;
+		}
 	}
-
+  
 	&.card--plain {
 		@include card-style-generator($blue, $blue-hover);
 	}
 
 	.card__image {
 		@include AU-space(padding-top, 1unit);
-	}
 }

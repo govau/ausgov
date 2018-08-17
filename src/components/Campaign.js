@@ -3,8 +3,9 @@ import Card from "./Card";
 
 const Campaign = () => (
 	<div className="container">
+  
 		<div className="row">
-			<div className="col-md-3">
+			<div className="col-xl-2 col-md-3">
 				<Card
 					title="Youth Jobs PaTH"
 					bodyText="A flexible way to trial and hire the right young person for your business."
@@ -13,7 +14,7 @@ const Campaign = () => (
 					image="https://www.australia.gov.au/sites/default/files/styles/homepage_quick_link_carousel/public/global_site/library/images/carousel_images/ausgovau_YouthJobsPaTH_259x153.jpg?itok=goqS2o8J"
 				/>
 			</div>
-			<div className="col-md-3">
+			<div className="col-xl-2 col-md-3">
 				<Card
 					title="BreastScreen Australia"
 					bodyText="Invitation for free breast screening now covers women 70-74."
@@ -22,8 +23,7 @@ const Campaign = () => (
 					image="https://www.australia.gov.au/sites/default/files/styles/homepage_quick_link_carousel/public/global_site/library/images/carousel_images/breast-screen-560x215.jpg?itok=GgS_uUBk"
 				/>
 			</div>
-
-			<div className="col-md-3">
+			<div className="col-xl-2 col-md-3">
 				<Card
 					link="https://www.homeaffairs.gov.au/about/contact/report-suspicious-activities-behaviour/protection-customs-fraud-offences"
 					image="https://www.australia.gov.au/sites/default/files/styles/homepage_quick_link_carousel/public/global_site/library/images/carousel_images/BorderWatchPromo_275x160.jpg?itok=Vi3oKSJg"
@@ -33,8 +33,9 @@ const Campaign = () => (
 				/>
 			</div>
 		</div>
+  
 		<div className="row">
-			<div className="col-md-3">
+			<div className="col-xl-2 col-md-3">
 				<Card
 					link="https://www.defencejobs.gov.au/"
 					image="https://www.australia.gov.au/sites/default/files/styles/homepage_quick_link_carousel/public/global_site/library/images/carousel_images/defence-jobs-%20large.jpg?itok=I63L9HhF"
@@ -43,7 +44,7 @@ const Campaign = () => (
 					bodyText="Find out more about life in the ADF or about Army, Navy and Air Force careers."
 				/>
 			</div>
-			<div className="col-md-3">
+			<div className="col-xl-2 col-md-3">
 				<Card
 					link="https://jobactive.gov.au/"
 					image="https://www.australia.gov.au/sites/default/files/styles/homepage_quick_link_carousel/public/global_site/library/images/carousel_images/jobactive.jpg?itok=qnEb_TSz"

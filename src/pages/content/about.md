@@ -26,10 +26,11 @@ Refer to the Terms of use page for the linking policy on australia.gov.au. Austr
 
 australia.gov.au has been developed with usability, privacy and accessibility principles in mind. We're always keen to improve the site. If you have any feedback, ideas or even complaints, please send them in writing to the following postal address:
 
-```
-australia.gov.au, Service Manager
-Digital Transformation Agency
-PO Box 457
-Canberra ACT 2600
+</br>
+<strong>
+australia.gov.au, Service Manager</br>
+Digital Transformation Agency</br>
+PO Box 457</br>
+Canberra ACT 2601</br>
 Australia
-```
+</strong>
