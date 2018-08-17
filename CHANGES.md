@@ -1,6 +1,7 @@
 ## 0.2.4
 
 -   Bumped homepage titles from `h2` -> `h1`
+-   Implemented au-fontgrid to `h1` and `h2`
 
 ## 0.1.4
 
