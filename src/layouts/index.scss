@@ -6,21 +6,16 @@ html {
 	padding: 0;
 }
 
-.app-container {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-}
-
 .container-fluid {
 	@include AU-space(max-width, 72unit);
 }
 
 .au-body {
 	padding: 16px;
-	flex: 1;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
 	p {
 		a {
 			text-decoration: none;
