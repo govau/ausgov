@@ -6,6 +6,14 @@ html {
 	padding: 0;
 }
 
+h1 {
+	@include AU-fontgrid(xl, heading);
+}
+
+h2 {
+	@include AU-fontgrid(lg, heading);
+}
+
 .container-fluid {
 	@include AU-space(max-width, 72unit);
 }
