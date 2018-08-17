@@ -23,6 +23,6 @@ $purple-hover: #e8e4f3;
 $green: #32a556;
 $green-hover: #def0e4;
 $blue: #00c3ef;
-$blue-hover: #00c3ef27;
+$blue-hover: rgba(#00c3ef, 0.1);
 
 @import "_uikit.scss";
