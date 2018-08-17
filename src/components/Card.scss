@@ -1,47 +1,65 @@
 @import "../_variables.scss";
 
-.card-link {
-	.card {
-		box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
-		transition: 0.3s;
-		border-radius: 0.25rem;
-		padding: 1rem;
-		margin-bottom: 2rem;
-
-		&:hover {
-			transition: 0.5s;
-			box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-
-			.card__text {
-				text-decoration: none;
-			}
-		}
-
-		&.card--purple-light {
-			border-top: solid 5px $purple-light;
-			&:hover {
-				background: $purple-light-hover;
-			}
-		}
-
-		&.card--purple {
-			border-top: solid 5px $purple;
-			&:hover {
-				background: $purple-hover;
-			}
-		}
-
-		&.card--green {
-			border-top: solid 5px $green;
-			&:hover {
-				background: $green-hover;
-			}
-		}
+@mixin card-style-generator($color, $color-hover) {
+	border-top: solid 5px $color;
+	&:hover {
+		background: $color-hover;
 	}
 }
 
-.col-md-4 {
-	.card-link {
+a.card {
+	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0.25rem;
+	height: 100%;
+	@include AU-space(padding, 0unit 1unit 1unit 1unit);
+	@include AU-space(margin-bottom, 2unit);
+	display: block;
+	border-bottom: none;
+	.au-body & {
 		text-decoration: none;
+	}
+
+	&.card--campaign {
+		min-height: 22rem;
+	}
+
+	&.card--standard {
+		min-height: 7rem;
+	}
+
+	&:hover {
+		box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+
+		.card__text {
+			text-decoration: none;
+		}
+	}
+
+	&.card--purple-light {
+		@include card-style-generator($purple-light, $purple-light-hover);
+	}
+
+	&.card--purple {
+		@include card-style-generator($purple, $purple-hover);
+	}
+
+	&.card--green {
+		@include card-style-generator($green, $green-hover);
+	}
+
+	&.card--plain {
+		@include card-style-generator($blue, $blue-hover);
+	}
+
+	.card__image {
+		@include AU-space(padding-top, 1unit);
+	}
+
+	&.card--plain {
+		@include card-style-generator($blue, $blue-hover);
+	}
+
+	.card__image {
+		@include AU-space(padding-top, 1unit);
 	}
 }

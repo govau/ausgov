@@ -6,25 +6,35 @@ html {
 	padding: 0;
 }
 
-.app-container {
-	margin: 0;
-	padding: 0;
+h1 {
+	@include AU-fontgrid(xl, heading);
+}
+
+h2 {
+	@include AU-fontgrid(lg, heading);
+}
+
+.container-fluid {
+	@include AU-space(max-width, 72unit);
+}
+
+.root {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-}
 
-.au-body {
-	padding: 16px;
-	flex: 1;
+	.au-body {
+		a {
+			text-decoration: none;
+		}
+	}
+
 	p {
 		a {
 			text-decoration: none;
-			border-bottom: 1px solid $text-underline;
 		}
 		a:hover {
 			color: $AU-colordark-foreground-action;
-			transition: 0.25s;
 		}
 	}
 }
@@ -37,5 +47,4 @@ a {
 
 a:hover {
 	color: $AU-colordark-foreground-action;
-	transition: 0.25s;
 }

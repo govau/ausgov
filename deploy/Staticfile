@@ -1,2 +1,3 @@
-root: /tmp/app/public
-location_include: includes/*.conf
+root: _site/public
+status_codes:
+  404: /404.html
