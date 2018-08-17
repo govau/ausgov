@@ -15,11 +15,14 @@ $AU-colordark-background: #135e70 !default;
 $text-underline: #00c3ef;
 $banner-border-bottom: #d56a40;
 
+// card styles
 $purple-light: #912b87;
 $purple-light-hover: #edddec;
 $purple: #5f43ac;
 $purple-hover: #e8e4f3;
 $green: #32a556;
 $green-hover: #def0e4;
+$blue: #00c3ef;
+$blue-hover: rgba(#00c3ef, 0.1);
 
 @import "_uikit.scss";

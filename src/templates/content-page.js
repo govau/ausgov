@@ -7,9 +7,10 @@ export default function Template({ data }) {
 
 	return (
 		<div className="content-page">
-			<div className="container">
+			<div className="container au-body">
 				<h1>{post.frontmatter.title}</h1>
 				<p dangerouslySetInnerHTML={{ __html: post.html }} />
+				<br />
 			</div>
 		</div>
 	);

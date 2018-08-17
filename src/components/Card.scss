@@ -1,46 +1,65 @@
 @import "../_variables.scss";
 
-.card {
-	display: block;
+@mixin card-style-generator($color, $color-hover) {
+	border-top: solid 5px $color;
+	&:hover {
+		background: $color-hover;
+	}
+}
+
+a.card {
 	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 	border-radius: 0.25rem;
-	padding: 1rem;
-	margin-bottom: 2rem;
-
+	height: 100%;
+	@include AU-space(padding, 0unit 1unit 1unit 1unit);
+	@include AU-space(margin-bottom, 2unit);
+	display: block;
+	border-bottom: none;
 	.au-body & {
 		text-decoration: none;
 	}
 
-	.card__heading {
-		margin: 0;
-		color: $AU-color-foreground-action;
+	&.card--campaign {
+		min-height: 22rem;
 	}
 
-	&:hover .card__heading {
-		color: $AU-color-foreground-text;
+	&.card--standard {
+		min-height: 7rem;
+	}
+
+	&:hover {
+		box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+
+		.card__text {
+			text-decoration: none;
+		}
 	}
 
 	&.card--purple-light {
-		border-top: solid 5px $purple-light;
-		color: $purple-light;
-		&:hover {
-			background: $purple-light-hover;
-		}
+		@include card-style-generator($purple-light, $purple-light-hover);
 	}
 
 	&.card--purple {
-		border-top: solid 5px $purple;
-		color: $purple-light;
-		&:hover {
-			background: $purple-hover;
-		}
+		@include card-style-generator($purple, $purple-hover);
 	}
 
 	&.card--green {
-		border-top: solid 5px $green;
-		color: $green;
-		&:hover {
-			background: $green-hover;
-		}
+		@include card-style-generator($green, $green-hover);
+	}
+
+	&.card--plain {
+		@include card-style-generator($blue, $blue-hover);
+	}
+
+	.card__image {
+		@include AU-space(padding-top, 1unit);
+	}
+
+	&.card--plain {
+		@include card-style-generator($blue, $blue-hover);
+	}
+
+	.card__image {
+		@include AU-space(padding-top, 1unit);
 	}
 }
