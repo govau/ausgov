@@ -25,7 +25,8 @@ const Header = ({ siteTitle }) => (
 										alt="australia.gov.au logo"
 									/>{" "}
 									<span className="alpha-badge">
-										alpha{` ${version}`}
+										alpha
+										{` ${version}`}
 									</span>
 								</div>
 							}
