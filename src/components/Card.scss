@@ -9,8 +9,8 @@
 
 a.card {
 	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
-	transition: 0.3s;
 	border-radius: 0.25rem;
+	height: 100%;
 	@include AU-space(padding, 0unit 1unit 1unit 1unit);
 	@include AU-space(margin-bottom, 2unit);
 	display: block;
@@ -19,8 +19,15 @@ a.card {
 		text-decoration: none;
 	}
 
+	&.card--campaign {
+		min-height: 22rem;
+	}
+
+	&.card--standard {
+		min-height: 6rem;
+	}
+
 	&:hover {
-		transition: 0.5s;
 		box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
 
 		.card__text {

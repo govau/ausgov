@@ -63,7 +63,7 @@ const Layout = ({ children, data }) => (
 			]}
 		/>
 		<Header siteTitle={data.site.siteMetadata.title} />
-		<div className="au-body">{children()}</div>
+		<div>{children()}</div>
 		<br />
 		<Footer />
 	</main>

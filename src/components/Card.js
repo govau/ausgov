@@ -4,7 +4,10 @@ import "./Card.scss";
 
 const Card = props => {
 	return (
-		<a href={props.link} className={"card card--" + props.color}>
+		<a
+			href={props.link}
+			className={"card card--" + props.color + " card--" + props.type}
+		>
 			{props.image && (
 				<img
 					src={props.image}
