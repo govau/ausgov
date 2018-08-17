@@ -24,7 +24,7 @@ a.card {
 	}
 
 	&.card--standard {
-		min-height: 6rem;
+		min-height: 7rem;
 	}
 
 	&:hover {
@@ -45,6 +45,14 @@ a.card {
 
 	&.card--green {
 		@include card-style-generator($green, $green-hover);
+	}
+
+	&.card--plain {
+		@include card-style-generator($blue, $blue-hover);
+	}
+
+	.card__image {
+		@include AU-space(padding-top, 1unit);
 	}
 
 	&.card--plain {
