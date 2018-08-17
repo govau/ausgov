@@ -23,6 +23,12 @@ h2 {
 	min-height: 100vh;
 	flex-direction: column;
 
+	.au-body {
+		a {
+			text-decoration: none;
+		}
+	}
+
 	p {
 		a {
 			text-decoration: none;
