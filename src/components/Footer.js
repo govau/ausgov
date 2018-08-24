@@ -35,7 +35,7 @@ const Footer = () => (
 					Commonwealth Coat of Arms and where otherwise noted, this
 					work is licensed under the{" "}
 					<a
-						href="https://raw.githubusercontent.com/adamzerella/ausgov/master/LICENSE"
+						href="https://raw.githubusercontent.com/govau/ausgov/master/LICENSE"
 						rel="external"
 					>
 						MIT license
