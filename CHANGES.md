@@ -2,6 +2,7 @@
 
 -   Bumped homepage titles from `h2` -> `h1`
 -   Implemented au-fontgrid to `h1` and `h2`
+-   Implemented `@gov.au/main-nav` with placeholder item
 
 ## 0.1.4
 

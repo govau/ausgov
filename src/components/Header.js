@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "gatsby-link";
 import AUheader, { AUheaderBrand } from "@gov.au/header";
+import AUmainNav, { AUmainNavContent } from "@gov.au/main-nav";
+
 import crest from "../assets/crest.svg";
 import logo from "../assets/logo.svg";
 
@@ -38,6 +40,23 @@ const Header = ({ siteTitle }) => (
 				</div>
 			</div>
 		</AUheader>
+		<AUmainNav>
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12">
+						<AUmainNavContent
+							items={[
+								{
+									link: "/about",
+									text: "About",
+									active: isLinkActive("/about"),
+								},
+							]}
+						/>
+					</div>
+				</div>
+			</div>
+		</AUmainNav>
 	</div>
 );
 
@@ -63,5 +82,14 @@ const OfficalBanner = () => (
 		</div>
 	</div>
 );
+
+/**
+ * Return true if the current URL is matched with the provided link.
+ * @param {String} - Link path e.g /about or /contact
+ * @returns {Boolean} - True if match, false otherwise.
+ */
+const isLinkActive = link => {
+	return link === window.location.pathname;
+};
 
 export default Header;

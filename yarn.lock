@@ -176,6 +176,30 @@
     "@gov.au/pancake-react" "~1"
     "@gov.au/pancake-sass" "~2"
 
+"@gov.au/link-list@^3.0.0":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@gov.au/link-list/-/link-list-3.0.2.tgz#a859293b17e80486fc7cf06365deef74678e5829"
+  dependencies:
+    "@gov.au/body" "^2.0.0"
+    "@gov.au/core" "^3.0.0"
+    "@gov.au/pancake" "~1"
+    "@gov.au/pancake-json" "~1"
+    "@gov.au/pancake-react" "~1"
+    "@gov.au/pancake-sass" "~2"
+
+"@gov.au/main-nav@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@gov.au/main-nav/-/main-nav-0.1.2.tgz#d1cbcd7f08294549422fb7a3594575825f0195e0"
+  dependencies:
+    "@gov.au/animate" "^1.0.0"
+    "@gov.au/core" "^3.0.0"
+    "@gov.au/link-list" "^3.0.0"
+    "@gov.au/pancake" "~1"
+    "@gov.au/pancake-js" "~1"
+    "@gov.au/pancake-json" "~1"
+    "@gov.au/pancake-react" "~1"
+    "@gov.au/pancake-sass" "~2"
+
 "@gov.au/pancake-js@~1":
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/@gov.au/pancake-js/-/pancake-js-1.0.13.tgz#7cb8d19e6ae5baa658647ab2e187abaf784fa814"
