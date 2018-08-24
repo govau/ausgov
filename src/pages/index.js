@@ -91,7 +91,7 @@ class Index extends React.Component {
 				<br />
 
 				<div className="au-body au-body--alt">
-					<div className="container-fluid">
+					<div className="container">
 						<h1>What's the Government promoting?</h1>
 						<Campaign />
 					</div>

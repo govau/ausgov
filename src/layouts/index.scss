@@ -13,38 +13,3 @@ h1 {
 h2 {
 	@include AU-fontgrid(lg, heading);
 }
-
-.container-fluid {
-	@include AU-space(max-width, 72unit);
-}
-
-.root {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-
-	.au-body {
-		a {
-			text-decoration: none;
-		}
-	}
-
-	p {
-		a {
-			text-decoration: none;
-		}
-		a:hover {
-			color: $AU-colordark-foreground-action;
-		}
-	}
-}
-
-a {
-	color: white;
-	text-decoration: none;
-	border-bottom: 1px solid $text-underline;
-}
-
-a:hover {
-	color: $AU-colordark-foreground-action;
-}
