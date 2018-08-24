@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 
 import "./content-page.scss";
 
@@ -7,6 +8,8 @@ export default function Template({ data }) {
 
 	return (
 		<div className="content-page">
+			<Helmet title={post.frontmatter.title} />
+
 			<div className="container au-body">
 				<h1>{post.frontmatter.title}</h1>
 				<p dangerouslySetInnerHTML={{ __html: post.html }} />
