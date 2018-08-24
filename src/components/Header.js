@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
 	<div className="header">
 		<OfficalBanner />
 		<AUheader>
-			<div className="container-fluid">
+			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
 						<AUheaderBrand
