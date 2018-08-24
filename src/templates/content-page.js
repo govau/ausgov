@@ -8,7 +8,11 @@ export default function Template({ data }) {
 
 	return (
 		<div className="content-page">
-			<Helmet title={post.frontmatter.title} />
+			<Helmet
+				title={`${post.frontmatter.title} | ${
+					data.site.siteMetadata.title
+				}`}
+			/>
 
 			<div className="container au-body">
 				<h1>{post.frontmatter.title}</h1>
@@ -25,6 +29,12 @@ export const postQuery = graphql`
 			html
 			frontmatter {
 				path
+				title
+			}
+		}
+
+		site {
+			siteMetadata {
 				title
 			}
 		}
