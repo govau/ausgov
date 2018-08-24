@@ -1,34 +1,5 @@
 @import "../_variables.scss";
 
-footer {
-	&.au-footer {
-		&.au-footer--dark {
-			background-color: #313131;
-			bottom: 0;
-			padding: 1rem;
-			border-top: none;
-
-			.au-footer__end {
-				font-weight: lighter;
-			}
-
-			.au-footer__navigation {
-				.au-link-list {
-					padding: 0;
-					display: inline-flex;
-
-					li {
-						padding-right: 16px;
-					}
-				}
-			}
-
-			.licenseLink {
-				width: 16px;
-				height: 16px;
-				margin-left: 0.2rem;
-				vertical-align: middle;
-			}
-		}
-	}
+footer .au-link-list--inline li {
+	@include AU-space(padding-right, 0.5unit);
 }

@@ -3,6 +3,7 @@
 -   Bumped homepage titles from `h2` -> `h1`
 -   Implemented au-fontgrid to `h1` and `h2`
 -   Added additional campaign tiles
+-   Deleted lots of sass code
 
 ## 0.1.4
 
