@@ -2,6 +2,7 @@
 
 -   Bumped homepage titles from `h2` -> `h1`
 -   Implemented au-fontgrid to `h1` and `h2`
+-   Page title will now uses content pages
 
 ## 0.1.4
 
