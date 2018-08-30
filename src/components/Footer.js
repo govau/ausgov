@@ -8,7 +8,7 @@ import linkIcon from "../assets/link.svg";
 
 const Footer = () => (
 	<div className="au-body au-body--dark">
-		<AUfooter dark inline>
+		<AUfooter dark>
 			<div className="container">
 				<AUfooterNav>
 					<AUlinkList
@@ -27,7 +27,6 @@ const Footer = () => (
 							},
 						]}
 						linkComponent={Link}
-						inline
 					/>
 				</AUfooterNav>
 				<AUfooterEnd>
