@@ -10,6 +10,10 @@ import "./Header.scss";
 
 const version = require("../../package.json").version;
 
+// Credit to: https://github.com/bendrucker/location-href. NodeJS doesn't allow
+// access to window by default
+const location = require("global/window").location || { href: "" };
+
 const Header = ({ siteTitle }) => (
 	<div className="au-body au-body--dark header">
 		<OfficalBanner />
@@ -88,7 +92,7 @@ const OfficalBanner = () => (
  * @returns {Boolean} - True if match, false otherwise.
  */
 const isLinkActive = link => {
-	return link === window.location.pathname;
+	return link === location.pathname;
 };
 
 export default Header;
