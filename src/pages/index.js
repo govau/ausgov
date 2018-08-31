@@ -19,7 +19,7 @@ class Index extends React.Component {
 								title="Our Country"
 								type="standard"
 								bodyText="Find out more about Australia"
-								color="purple-light"
+								color="neutral"
 								link="/about-australia"
 							/>
 						</div>
