@@ -1,7 +1,8 @@
 applications:
-    - name: ausgov
+    - name: ausgov-test
       buildpack: staticfile_buildpack
       memory: 128M
       instances: 1
       routes:
           - route: ausgov-test.apps.y.cld.gov.au
+      path: ../public
