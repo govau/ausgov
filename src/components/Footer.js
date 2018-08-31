@@ -4,7 +4,6 @@ import AUlinkList from "@gov.au/link-list";
 import Link from "gatsby-link";
 
 import "./Footer.scss";
-import linkIcon from "../assets/link.svg";
 
 const Footer = () => (
 	<div className="au-body au-body--dark">
@@ -12,6 +11,7 @@ const Footer = () => (
 			<div className="container">
 				<AUfooterNav>
 					<AUlinkList
+						inline
 						items={[
 							{
 								link: "/about",
