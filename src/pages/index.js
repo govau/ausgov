@@ -28,7 +28,7 @@ class Index extends React.Component {
 								title="National Symbols"
 								type="standard"
 								bodyText="See National Symbols"
-								color="green"
+								color="neutral"
 								link="/national-symbols"
 							/>
 						</div>
@@ -37,7 +37,7 @@ class Index extends React.Component {
 								title="Telephone Codes"
 								type="standard"
 								bodyText="Check Australian Phone codes"
-								color="purple"
+								color="neutral"
 								link="/telephone-country-and-area-codes"
 							/>
 						</div>
@@ -50,7 +50,7 @@ class Index extends React.Component {
 								title="School Holidays"
 								type="standard"
 								bodyText="Check to see upcoming school holidays"
-								color="purple-light"
+								color="neutral"
 								link="/school-term-dates"
 							/>
 						</div>
@@ -59,7 +59,7 @@ class Index extends React.Component {
 								title="Public Holidays"
 								type="standard"
 								bodyText="Check public holidays for your state"
-								color="green"
+								color="neutral"
 								link="/holiday"
 							/>
 						</div>
@@ -68,7 +68,7 @@ class Index extends React.Component {
 								title="Timezones"
 								type="standard"
 								bodyText="Check timezones in Australia"
-								color="purple"
+								color="neutral"
 								link="/time-zones-and-daylight-saving"
 							/>
 						</div>
