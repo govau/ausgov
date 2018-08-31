@@ -6,6 +6,7 @@
 -   Page title will now uses content pages
 -   Added additional campaign tiles
 -   Deleted lots of sass code
+-   Changed index card colours to neutral ones.
 
 ## 0.1.4
 

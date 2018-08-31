@@ -8,14 +8,16 @@
 }
 
 a.card {
+	@include AU-space(padding, 0unit 1unit 1unit 1unit);
+	@include AU-space(margin-bottom, 2unit);
+
 	background: $AU-color-background;
 	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 	border-radius: 0.25rem;
 	height: 100%;
-	@include AU-space(padding, 0unit 1unit 1unit 1unit);
-	@include AU-space(margin-bottom, 2unit);
 	display: block;
 	border-bottom: none;
+
 	.au-body & {
 		text-decoration: none;
 	}
@@ -52,12 +54,8 @@ a.card {
 		@include card-style-generator($blue, $blue-hover);
 	}
 
-	.card__image {
-		@include AU-space(padding-top, 1unit);
-	}
-
-	&.card--plain {
-		@include card-style-generator($blue, $blue-hover);
+	&.card--neutral {
+		@include card-style-generator($neutral, $neutral-hover);
 	}
 
 	.card__image {
