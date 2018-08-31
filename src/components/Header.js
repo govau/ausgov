@@ -9,11 +9,45 @@ import logo from "../assets/logo.svg";
 import "./Header.scss";
 
 const version = require("../../package.json").version;
-
+const menu = [
+	{
+		link: "#",
+		text: "About",
+	},
+	{
+		link: "#",
+		text: "Get started",
+	},
+	{
+		link: "#",
+		text: "Components",
+		active: true,
+	},
+	{
+		link: "#",
+		text: "Templates",
+	},
+	{
+		link: "#",
+		text: "Community",
+	},
+	{
+		link: "#",
+		text: "Support",
+	},
+	{
+		link: "#",
+		text: "GitHub",
+	},
+	{
+		link: "#",
+		text: "Download",
+	},
+];
 const Header = ({ siteTitle }) => (
-	<div className="header">
-		<OfficalBanner />
-		<AUheader>
+	<div className="au-body au-body--dark header">
+		{/* <OfficalBanner /> */}
+		<AUheader dark>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
@@ -40,19 +74,21 @@ const Header = ({ siteTitle }) => (
 				</div>
 			</div>
 		</AUheader>
-		<AUmainNav>
+
+		<AUmainNav dark alt>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
-						<AUmainNavContent
-							items={[
-								{
-									link: "/about",
-									text: "About",
-									active: isLinkActive("/about"),
-								},
-							]}
-						/>
+						<AUmainNavContent items={menu}>
+							<ul className="au-link-list au-link-list--inline">
+								<li>
+									<a href="">Some extra thing</a>
+								</li>
+								<li>
+									<a href="">Another thing</a>
+								</li>
+							</ul>
+						</AUmainNavContent>
 					</div>
 				</div>
 			</div>

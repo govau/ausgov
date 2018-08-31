@@ -2,6 +2,7 @@ import React from "react";
 
 import Campaign from "../components/Campaign";
 import Card from "../components/Card";
+import AUmainNav, { AUmainNavContent } from "@gov.au/main-nav";
 
 import PublicHolidays from "../components/PublicHoliday";
 
@@ -96,6 +97,22 @@ class Index extends React.Component {
 						<Campaign />
 					</div>
 				</div>
+				<AUmainNav>
+					<div className="container">
+						<div className="row">
+							<div className="col-md-12">
+								<AUmainNavContent
+									items={[
+										{
+											link: "/about",
+											text: "About",
+										},
+									]}
+								/>
+							</div>
+						</div>
+					</div>
+				</AUmainNav>
 			</div>
 		);
 	}

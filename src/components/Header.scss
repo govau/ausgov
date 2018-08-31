@@ -2,7 +2,6 @@
 
 .header {
 	.au-header {
-		background-color: #212121;
 		padding: 1rem;
 
 		.header-logo img {
@@ -23,25 +22,6 @@
 				div {
 					color: white;
 					text-decoration: none;
-				}
-			}
-		}
-	}
-
-	.au-main-nav {
-		border-bottom: 0.25rem solid $text-underline;
-
-		.au-link-list {
-			li {
-				a {
-					text-decoration: none;
-					border-bottom: none;
-					margin-bottom: 0;
-				}
-
-				&.active {
-					margin-bottom: -0.25rem;
-					border-bottom: 0.25rem solid white;
 				}
 			}
 		}
