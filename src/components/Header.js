@@ -9,44 +9,10 @@ import logo from "../assets/logo.svg";
 import "./Header.scss";
 
 const version = require("../../package.json").version;
-const menu = [
-	{
-		link: "#",
-		text: "About",
-	},
-	{
-		link: "#",
-		text: "Get started",
-	},
-	{
-		link: "#",
-		text: "Components",
-		active: true,
-	},
-	{
-		link: "#",
-		text: "Templates",
-	},
-	{
-		link: "#",
-		text: "Community",
-	},
-	{
-		link: "#",
-		text: "Support",
-	},
-	{
-		link: "#",
-		text: "GitHub",
-	},
-	{
-		link: "#",
-		text: "Download",
-	},
-];
+
 const Header = ({ siteTitle }) => (
 	<div className="au-body au-body--dark header">
-		{/* <OfficalBanner /> */}
+		<OfficalBanner />
 		<AUheader dark>
 			<div className="container">
 				<div className="row">
@@ -75,20 +41,19 @@ const Header = ({ siteTitle }) => (
 			</div>
 		</AUheader>
 
-		<AUmainNav dark alt>
+		<AUmainNav dark>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
-						<AUmainNavContent items={menu}>
-							<ul className="au-link-list au-link-list--inline">
-								<li>
-									<a href="">Some extra thing</a>
-								</li>
-								<li>
-									<a href="">Another thing</a>
-								</li>
-							</ul>
-						</AUmainNavContent>
+						<AUmainNavContent
+							items={[
+								{
+									link: "/about",
+									text: "About",
+									active: isLinkActive("/about"),
+								},
+							]}
+						/>
 					</div>
 				</div>
 			</div>
@@ -101,18 +66,16 @@ const OfficalBanner = () => (
 		<div className="container-fluid">
 			<div className="row">
 				<div className="col-md-12">
-					<p>
-						This website is in alpha. We’re testing new designs and
-						a small amount of content. Let us know what you think.
-						Go back to{" "}
-						<a
-							href="https://www.australia.gov.au/"
-							title="australia.gov.au"
-							target="_blank"
-						>
-							australia.gov.au
-						</a>
-					</p>
+					This website is in alpha. We’re testing new designs and a
+					small amount of content. Let us know what you think. Go back
+					to{" "}
+					<a
+						href="https://www.australia.gov.au/"
+						title="australia.gov.au"
+						target="_blank"
+					>
+						australia.gov.au
+					</a>
 				</div>
 			</div>
 		</div>
