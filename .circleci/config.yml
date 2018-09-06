@@ -36,6 +36,12 @@ jobs:
         steps:
             - attach_workspace:
                   at: ~/project # /home/root/project
+            # - run:
+            #   name: Copy nginx conf files into public
+            #   command: |
+            #       rsync -r --exclude 'public/_site' public public/_site
+            #       cp -r deploy/nginx public/nginx/_site
+            #       cp -r deploy/Staticfile public/Staticfile/_site
             - run:
                   name: Deploying to cloud.gov.au
                   command: |
@@ -49,7 +55,7 @@ workflows:
                   filters:
                       branches:
                           only:
-                              - develop
+                              - issue/resolve-nginx-404-pathing
             - deploy-stag:
                   requires:
                       - build-ausgov
