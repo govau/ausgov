@@ -37,8 +37,10 @@ the command listed below and using `gpg` or equivilent:
 cd .ops/
 
 gpg -e \
--r 389639C5833B44301748C702180195DA764B80DD \
-staging_password.txt
+-r 389639C5833B44301748C702180195DA764B80DD \   # adam.zerella@digital.gov.au
+-r 47B9EF136946346F92C569A1ED0B82C16E473EA9 \   # sukhraj.ghuman@digital.gov.au
+-r 005550D674B0D476AF3A05F95A2BD6C509BBD282 \   # brendan.ng@digital.gov.au
+env_staging.txt
 ```
 
 # Decryption
