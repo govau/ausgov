@@ -25,20 +25,25 @@ jobs:
             - run:
                   name: Build alpha.australia.gov.au
                   command: yarn run build
-            - run:
-                  name: Copy deployment files into build dir
-                  command: cp .deploy/.htpasswd .deploy/mime.types .deploy/nginx.conf public/
             - persist_to_workspace:
                   root: ~/project # /home/circleci/project
                   paths:
-                      - .deploy
+                      - .deploy/stag-manifest.yml
+                      - .deploy/prod-manifest.yml
+                      - .deploy/.htpasswd
+                      - .deploy/mime.types
+                      - .deploy/nginx.conf
                       - public
+
     deploy-stag:
         docker:
             - image: govau/cf-cli
         steps:
             - attach_workspace:
                   at: ~/project # /home/root/project
+            - run:
+                  name: Copying custom deployment nginx configurations
+                  command: cp .deploy/.htpasswd .deploy/mime.types .deploy/nginx.conf public/
             - run:
                   name: Deploying to cloud.gov.au
                   command: |
