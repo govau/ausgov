@@ -1,7 +1,0 @@
----
-applications:
-- name: ausgov
-  buildpack: staticfile_buildpack
-  memory: 256M
-  instances: 1
-  path: "../public"
