@@ -1,0 +1,5 @@
+applications:
+    - name: new-ausgov
+      buildpack: staticfile_buildpack
+      memory: 128M
+      instances: 2

@@ -25,11 +25,14 @@ jobs:
             - run:
                   name: Build alpha.australia.gov.au
                   command: yarn run build
+            - run:
+                  name: Copy deployment files into build dir
+                  command: cp .deploy/.htpasswd .deploy/mime.types .deploy/nginx.conf public/
             - persist_to_workspace:
                   root: ~/project # /home/circleci/project
                   paths:
-                      - ./deploy
-                      - ./public
+                      - .deploy
+                      - public
     deploy-stag:
         docker:
             - image: govau/cf-cli
@@ -39,8 +42,8 @@ jobs:
             - run:
                   name: Deploying to cloud.gov.au
                   command: |
-                      cf login -a api.system.y.cld.gov.au -o dta -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
-                      cf zero-downtime-push ausgov -f ./deploy/stag-manifest.yml
+                      cf login -a $CF_STAG_API -o $CF_ORG -s $CF_STAG_SPACE -u $CF_STAG_USER -p $CF_STAG_PASS
+                      cf zero-downtime-push new-ausgov -f ./.deploy/stag-manifest.yml
 workflows:
     version: 2
     build-and-deploy:
