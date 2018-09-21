@@ -47,5 +47,55 @@ env_staging.txt
 
 ```bash
 cd .ops/
-gpg -d env_staging.txt.gpg # Will print to stdout
+
+# Will write to stdout
+gpg -d env_staging.txt.gpg
+
+# Will write to a file 'env_staging.txt'
+gpg -d env_staging.txt.gpg > env_staging.txt
+```
+
+# Sharing your key
+
+Sharing a PGP key can be done using a central keyserver or manually sharing the public key.
+The public keys of everybody who the parties looking to decrypt the file need to be imported by whomever is encrypting the file.
+
+## Obtaining your public key
+
+```bash
+# List your PUBLIC key(s)
+gpg -k
+
+# List your PRIVATE key(s)
+gpg -K
+```
+
+### Sample output:
+
+```
+pub rsa4096 2018-07-06 [SC]
+    389639C5831513301748C702180195DA764B80DD
+uid [ultimate] Bob Smith <bob.smith@digital.gov.au>
+sub rsa4096 2018-07-06 [E]
+```
+
+> In this example **389639C5831513301748C702180195DA764B80DD** is the public key
+
+## Exporting
+
+```bash
+# Exports ALL public keys from your keychain.
+gpg --export > my_public_keys.asc
+
+# Exports specific public key
+gpg --export 389639C5831513301748C702180195DA764B80DD > my_public_key.asc
+
+# Exports specific public key as ASCII PGP public key block
+gpg --export --armor 389639C5831513301748C702180195DA764B80DD > my_public_key.txt
+```
+
+## Importing
+
+```bash
+gpg --import <key>
 ```
