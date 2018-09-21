@@ -3,3 +3,4 @@ applications:
       buildpack: staticfile_buildpack
       memory: 128M
       instances: 2
+      path: ../public

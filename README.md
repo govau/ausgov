@@ -42,7 +42,7 @@ yarn dev
 
 # Deployment
 
-This project is a static [nginx](https://nginx.org/en/) deployment hosted on [cloud.gov.au](https://cloud.gov.au). A preview of the staging environment can be seen at: https://ausgov.apps.y.cld.gov.au/. For now, changes made to the `develop` branch are automatically published to the staging site listed above.
+This project is a static [nginx](https://nginx.org/en/) deployment hosted on [cloud.gov.au](https://cloud.gov.au). A preview of the staging environment can be seen at: https://new-ausgov.apps.y.cld.gov.au/. For now, changes made to the `develop` branch are automatically published to the staging site listed above.
 
 # Contributors
 
