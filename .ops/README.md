@@ -8,7 +8,7 @@
 See: https://www.gnupg.org/download/
 
 # MacOS
-brew instal gnupg
+brew install gnupg
 
 # Ubuntu 18.04
 sudo apt install gpg
