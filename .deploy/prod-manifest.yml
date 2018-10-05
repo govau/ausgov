@@ -1,6 +1,6 @@
 applications:
     - name: new-ausgov
-      buildpack: staticfile_buildpack
+      buildpack: nginx_buildpack
       memory: 128M
       instances: 2
       path: ../public

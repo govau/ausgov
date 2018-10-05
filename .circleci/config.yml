@@ -33,7 +33,7 @@ jobs:
                       - .deploy/.htpasswd
                       - .deploy/mime.types
                       - .deploy/nginx.conf
-                      - .deploy/buildpacks.yml
+                      - .deploy/buildpack.yml
                       - public
 
     deploy-stag:
@@ -44,7 +44,7 @@ jobs:
                   at: ~/project # /home/root/project
             - run:
                   name: Copying custom deployment nginx configurations
-                  command: cp .deploy/.htpasswd .deploy/mime.types .deploy/nginx.conf .deploy/buildpacks.yml public/
+                  command: cp .deploy/.htpasswd .deploy/mime.types .deploy/nginx.conf .deploy/buildpack.yml public/
             - run:
                   name: Deploying to cloud.gov.au
                   command: |
