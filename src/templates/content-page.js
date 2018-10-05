@@ -9,7 +9,7 @@ export default function Template({ data }) {
 	return (
 		<div className="content-page">
 			<Helmet
-				title={`${post.frontmatter.title} || ${
+				title={`${post.frontmatter.title} | ${
 					data.site.siteMetadata.title
 				}`}
 			/>
