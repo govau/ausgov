@@ -7,6 +7,7 @@
 -   Added additional campaign tiles
 -   Deleted lots of sass code
 -   Changed index card colours to neutral ones.
+-   Added min-height property to .content-page
 
 ## 0.1.4
 
