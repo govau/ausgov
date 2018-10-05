@@ -10,7 +10,7 @@ import "./index.scss";
 class Index extends React.Component {
 	render() {
 		return (
-			<div>
+			<main>
 				<div className="container au-body">
 					<h1>About Australia</h1>
 					<div className="row row-aligned">
@@ -96,7 +96,7 @@ class Index extends React.Component {
 						<Campaign />
 					</div>
 				</div>
-			</div>
+			</main>
 		);
 	}
 }
